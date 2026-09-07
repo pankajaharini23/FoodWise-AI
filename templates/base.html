@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}FoodWise AI{% endblock %}
+    </title>
+
+
+    <!-- MAIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css', v='2') }}"
+    >
+
+
+    {% block extra_head %}{% endblock %}
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     COMMON NAVIGATION BAR
+========================================= -->
+
+<nav class="main-navbar">
+
+
+    <!-- =====================================
+         LOGO
+    ====================================== -->
+
+    <a
+        href="/"
+        class="brand"
+    >
+
+        <div class="brand-icon">
+
+            🍽️
+
+        </div>
+
+
+        <div class="brand-text">
+
+
+            <span class="brand-name">
+
+                FoodWise AI
+
+            </span>
+
+
+            <span class="brand-tagline">
+
+                Smart College Mess
+
+            </span>
+
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- =====================================
+         NAVIGATION LINKS
+    ====================================== -->
+
+    <div class="main-nav-links">
+
+
+        <a
+            href="/"
+            class="nav-item {% if request.path == '/' %}active{% endif %}"
+        >
+
+            🏠
+
+            <span>
+
+                Dashboard
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/analytics"
+            class="nav-item {% if request.path == '/analytics' %}active{% endif %}"
+        >
+
+            📈
+
+            <span>
+
+                Analytics
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/recommendations"
+            class="nav-item {% if request.path == '/recommendations' %}active{% endif %}"
+        >
+
+            🤖
+
+            <span>
+
+                AI Insights
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/alerts"
+            class="nav-item {% if request.path == '/alerts' %}active{% endif %}"
+        >
+
+            🔔
+
+            <span>
+
+                Alerts
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/history"
+            class="nav-item {% if request.path == '/history' %}active{% endif %}"
+        >
+
+            📋
+
+            <span>
+
+                History
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/waste-analysis"
+            class="nav-item {% if request.path == '/waste-analysis' %}active{% endif %}"
+        >
+
+            ♻️
+
+            <span>
+
+                Waste Analysis
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/waste-history"
+            class="nav-item {% if request.path == '/waste-history' %}active{% endif %}"
+        >
+
+            🗂️
+
+            <span>
+
+                Waste History
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/model-performance"
+            class="nav-item {% if request.path == '/model-performance' %}active{% endif %}"
+        >
+
+            📊
+
+            <span>
+
+                Model
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/profile"
+            class="nav-item {% if request.path == '/profile' %}active{% endif %}"
+        >
+
+            👤
+
+            <span>
+
+                Profile
+
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="/about"
+            class="nav-item {% if request.path == '/about' %}active{% endif %}"
+        >
+
+            ℹ️
+
+            <span>
+
+                About
+
+            </span>
+
+        </a>
+
+
+
+        <!-- =====================================
+             LOGOUT BUTTON
+        ====================================== -->
+
+    <a
+    href="{{ url_for('logout') }}"
+    class="nav-item logout-link"
+    onclick="return confirm('Are you sure you want to logout?');"
+>
+
+    🚪
+
+    <span>Logout</span>
+
+</a>
+
+
+    </div>
+
+
+</nav>
+
+
+
+<!-- =========================================
+     FLASH MESSAGES
+========================================= -->
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+
+    {% if messages %}
+
+        <div class="flash-container">
+
+
+            {% for category, message in messages %}
+
+
+                <div class="flash-message {{ category }}">
+
+
+                    {{ message }}
+
+
+                </div>
+
+
+            {% endfor %}
+
+
+        </div>
+
+    {% endif %}
+
+{% endwith %}
+
+
+
+<!-- =========================================
+     PAGE CONTENT
+========================================= -->
+
+{% block content %}
+
+{% endblock %}
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="main-footer">
+
+
+    <p>
+
+        © 2026 FoodWise AI
+
+        <span>
+
+            •
+
+        </span>
+
+        AI-Powered Smart College Mess Management
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =========================================
+     PAGE-SPECIFIC SCRIPTS
+========================================= -->
+
+{% block scripts %}
+
+{% endblock %}
+
+
+</body>
+
+</html>

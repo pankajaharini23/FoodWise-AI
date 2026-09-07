@@ -1,0 +1,1001 @@
+date,day,meal,menu,expected_students,holiday,special_event,semester_status,previous_demand,actual_demand
+2024-01-01,Monday,Breakfast,Idli,586,0,0,Regular,318,395
+2024-01-02,Tuesday,Dinner,Dosa,559,0,1,Regular,395,453
+2024-01-03,Wednesday,Lunch,Variety Rice,416,0,1,Regular,453,383
+2024-01-04,Thursday,Dinner,Variety Rice,561,0,0,Regular,383,413
+2024-01-05,Friday,Dinner,Idli,590,0,1,Regular,413,505
+2024-01-06,Saturday,Lunch,Biryani,259,0,0,Regular,505,259
+2024-01-07,Sunday,Dinner,Parotta,64,1,0,Regular,259,0
+2024-01-08,Monday,Breakfast,Poori,439,0,0,Regular,0,295
+2024-01-09,Tuesday,Dinner,Idli,383,1,0,Regular,295,283
+2024-01-10,Wednesday,Dinner,Idli,530,0,0,Regular,283,337
+2024-01-11,Thursday,Dinner,Idli,475,0,0,Regular,337,302
+2024-01-12,Friday,Dinner,Dosa,554,0,0,Regular,302,407
+2024-01-13,Saturday,Breakfast,Poori,295,0,0,Regular,407,179
+2024-01-14,Sunday,Breakfast,Dosa,72,1,0,Regular,179,0
+2024-01-15,Monday,Lunch,Chapati,433,0,0,Regular,0,350
+2024-01-16,Tuesday,Lunch,Chapati,592,0,0,Regular,350,437
+2024-01-17,Wednesday,Lunch,South Indian Meals,445,0,0,Regular,437,378
+2024-01-18,Thursday,Dinner,Variety Rice,575,0,0,Regular,378,430
+2024-01-19,Friday,Lunch,Chapati,541,0,0,Regular,430,484
+2024-01-20,Saturday,Dinner,Parotta,385,0,1,Regular,484,275
+2024-01-21,Sunday,Breakfast,Poori,52,1,0,Regular,275,0
+2024-01-22,Monday,Breakfast,Upma,442,0,1,Regular,0,258
+2024-01-23,Tuesday,Dinner,Parotta,437,0,0,Regular,258,310
+2024-01-24,Wednesday,Lunch,Variety Rice,505,0,0,Regular,310,424
+2024-01-25,Thursday,Breakfast,Pongal,550,0,0,Regular,424,338
+2024-01-26,Friday,Lunch,Special Meals,440,0,0,Regular,338,410
+2024-01-27,Saturday,Breakfast,Upma,382,0,0,Regular,410,213
+2024-01-28,Sunday,Lunch,Biryani,61,1,0,Regular,213,40
+2024-01-29,Monday,Breakfast,Idli,462,0,0,Regular,40,285
+2024-01-30,Tuesday,Lunch,South Indian Meals,499,0,0,Regular,285,422
+2024-01-31,Wednesday,Lunch,Biryani,494,0,0,Regular,422,485
+2024-02-01,Thursday,Dinner,Idli,430,0,1,Regular,485,367
+2024-02-02,Friday,Dinner,Parotta,427,0,0,Regular,367,385
+2024-02-03,Saturday,Dinner,Dosa,279,0,0,Regular,385,182
+2024-02-04,Sunday,Dinner,Variety Rice,112,1,0,Regular,182,0
+2024-02-05,Monday,Dinner,Chapati,487,0,0,Regular,0,296
+2024-02-06,Tuesday,Lunch,South Indian Meals,461,0,0,Regular,296,416
+2024-02-07,Wednesday,Lunch,South Indian Meals,582,0,0,Regular,416,481
+2024-02-08,Thursday,Breakfast,Upma,467,0,0,Regular,481,312
+2024-02-09,Friday,Dinner,Parotta,528,0,0,Regular,312,397
+2024-02-10,Saturday,Breakfast,Poori,263,0,0,Regular,397,93
+2024-02-11,Sunday,Lunch,Biryani,84,1,0,Regular,93,49
+2024-02-12,Monday,Lunch,Chapati,434,0,0,Regular,49,337
+2024-02-13,Tuesday,Breakfast,Poori,473,0,0,Regular,337,340
+2024-02-14,Wednesday,Breakfast,Dosa,542,0,0,Regular,340,313
+2024-02-15,Thursday,Breakfast,Poori,545,0,0,Regular,313,375
+2024-02-16,Friday,Lunch,Special Meals,587,0,0,Regular,375,513
+2024-02-17,Saturday,Lunch,Special Meals,345,0,0,Regular,513,308
+2024-02-18,Sunday,Dinner,Dosa,90,1,0,Regular,308,2
+2024-02-19,Monday,Lunch,Variety Rice,600,0,0,Regular,2,389
+2024-02-20,Tuesday,Dinner,Idli,519,0,0,Regular,389,343
+2024-02-21,Wednesday,Breakfast,Pongal,572,0,0,Regular,343,361
+2024-02-22,Thursday,Lunch,Biryani,526,0,0,Regular,361,526
+2024-02-23,Friday,Lunch,Chapati,431,0,0,Regular,526,431
+2024-02-24,Saturday,Breakfast,Pongal,250,0,0,Regular,431,77
+2024-02-25,Sunday,Breakfast,Poori,109,1,0,Regular,77,0
+2024-02-26,Monday,Breakfast,Dosa,454,0,0,Regular,0,269
+2024-02-27,Tuesday,Dinner,Dosa,419,0,0,Regular,269,321
+2024-02-28,Wednesday,Dinner,Chapati,510,0,0,Regular,321,390
+2024-02-29,Thursday,Lunch,Chapati,493,0,0,Regular,390,425
+2024-03-01,Friday,Dinner,Chapati,450,0,0,Regular,425,337
+2024-03-02,Saturday,Dinner,Idli,340,0,0,Regular,337,188
+2024-03-03,Sunday,Lunch,Chapati,148,1,0,Regular,188,27
+2024-03-04,Monday,Dinner,Variety Rice,404,0,0,Regular,27,297
+2024-03-05,Tuesday,Lunch,South Indian Meals,476,0,0,Regular,297,431
+2024-03-06,Wednesday,Lunch,Biryani,433,0,0,Regular,431,425
+2024-03-07,Thursday,Breakfast,Pongal,473,0,0,Regular,425,342
+2024-03-08,Friday,Dinner,Variety Rice,550,0,0,Regular,342,402
+2024-03-09,Saturday,Dinner,Idli,260,0,0,Regular,402,142
+2024-03-10,Sunday,Dinner,Idli,110,1,0,Regular,142,0
+2024-03-11,Monday,Lunch,Special Meals,445,0,0,Regular,0,373
+2024-03-12,Tuesday,Lunch,South Indian Meals,462,0,0,Regular,373,384
+2024-03-13,Wednesday,Breakfast,Poori,581,0,0,Regular,384,429
+2024-03-14,Thursday,Breakfast,Idli,494,0,0,Regular,429,357
+2024-03-15,Friday,Breakfast,Idli,430,0,0,Regular,357,331
+2024-03-16,Saturday,Breakfast,Pongal,362,0,0,Regular,331,166
+2024-03-17,Sunday,Dinner,Idli,63,1,1,Regular,166,0
+2024-03-18,Monday,Breakfast,Dosa,473,0,1,Regular,0,345
+2024-03-19,Tuesday,Lunch,Variety Rice,412,0,1,Regular,345,391
+2024-03-20,Wednesday,Breakfast,Poori,417,0,0,Regular,391,310
+2024-03-21,Thursday,Dinner,Chapati,431,0,0,Regular,310,311
+2024-03-22,Friday,Lunch,Chapati,546,0,1,Regular,311,507
+2024-03-23,Saturday,Breakfast,Poori,251,0,0,Regular,507,138
+2024-03-24,Sunday,Dinner,Dosa,119,1,0,Regular,138,0
+2024-03-25,Monday,Dinner,Variety Rice,515,0,0,Regular,0,344
+2024-03-26,Tuesday,Lunch,South Indian Meals,568,0,0,Regular,344,495
+2024-03-27,Wednesday,Lunch,South Indian Meals,426,0,0,Regular,495,377
+2024-03-28,Thursday,Breakfast,Upma,513,0,0,Regular,377,386
+2024-03-29,Friday,Breakfast,Upma,406,0,0,Regular,386,294
+2024-03-30,Saturday,Lunch,Special Meals,320,0,0,Regular,294,262
+2024-03-31,Sunday,Lunch,Biryani,91,1,0,Regular,262,78
+2024-04-01,Monday,Lunch,Variety Rice,260,0,0,Exam Period,78,214
+2024-04-02,Tuesday,Dinner,Idli,412,0,0,Exam Period,214,242
+2024-04-03,Wednesday,Lunch,Variety Rice,298,0,0,Exam Period,242,250
+2024-04-04,Thursday,Breakfast,Upma,363,0,0,Exam Period,250,197
+2024-04-05,Friday,Dinner,Chapati,284,0,0,Exam Period,197,195
+2024-04-06,Saturday,Lunch,Special Meals,437,0,0,Exam Period,195,314
+2024-04-07,Sunday,Lunch,South Indian Meals,241,1,0,Exam Period,314,136
+2024-04-08,Monday,Lunch,Biryani,261,0,0,Exam Period,136,261
+2024-04-09,Tuesday,Lunch,Variety Rice,420,0,0,Exam Period,261,333
+2024-04-10,Wednesday,Lunch,Chapati,407,0,0,Exam Period,333,328
+2024-04-11,Thursday,Lunch,Biryani,296,0,0,Exam Period,328,296
+2024-04-12,Friday,Dinner,Parotta,360,0,0,Exam Period,296,256
+2024-04-13,Saturday,Dinner,Chapati,428,0,0,Exam Period,256,198
+2024-04-14,Sunday,Lunch,Special Meals,224,1,1,Exam Period,198,101
+2024-04-15,Monday,Lunch,Variety Rice,450,0,0,Exam Period,101,310
+2024-04-16,Tuesday,Lunch,Variety Rice,441,0,0,Exam Period,310,344
+2024-04-17,Wednesday,Lunch,Chapati,345,0,1,Exam Period,344,288
+2024-04-18,Thursday,Breakfast,Pongal,351,0,0,Exam Period,288,191
+2024-04-19,Friday,Lunch,South Indian Meals,406,0,0,Exam Period,191,306
+2024-04-20,Saturday,Lunch,Chapati,416,0,0,Exam Period,306,261
+2024-04-21,Sunday,Breakfast,Poori,238,1,0,Exam Period,261,43
+2024-04-22,Monday,Breakfast,Pongal,316,0,0,Exam Period,43,145
+2024-04-23,Tuesday,Lunch,Variety Rice,277,0,0,Exam Period,145,247
+2024-04-24,Wednesday,Breakfast,Idli,346,0,0,Exam Period,247,167
+2024-04-25,Thursday,Lunch,Variety Rice,263,0,0,Exam Period,167,235
+2024-04-26,Friday,Breakfast,Upma,329,0,0,Exam Period,235,204
+2024-04-27,Saturday,Breakfast,Pongal,347,0,0,Exam Period,204,156
+2024-04-28,Sunday,Lunch,Special Meals,173,1,0,Exam Period,156,87
+2024-04-29,Monday,Breakfast,Upma,364,0,0,Exam Period,87,165
+2024-04-30,Tuesday,Dinner,Chapati,305,0,0,Exam Period,165,178
+2024-05-01,Wednesday,Dinner,Parotta,164,0,1,Semester Holiday,178,164
+2024-05-02,Thursday,Dinner,Idli,189,0,0,Semester Holiday,164,111
+2024-05-03,Friday,Dinner,Dosa,129,0,0,Semester Holiday,111,108
+2024-05-04,Saturday,Breakfast,Poori,135,0,0,Semester Holiday,108,16
+2024-05-05,Sunday,Lunch,Variety Rice,101,1,0,Semester Holiday,16,7
+2024-05-06,Monday,Breakfast,Poori,99,0,0,Semester Holiday,7,39
+2024-05-07,Tuesday,Breakfast,Pongal,116,0,0,Semester Holiday,39,0
+2024-05-08,Wednesday,Dinner,Idli,86,0,0,Semester Holiday,0,2
+2024-05-09,Thursday,Lunch,Chapati,165,0,0,Semester Holiday,2,106
+2024-05-10,Friday,Breakfast,Dosa,83,1,0,Semester Holiday,106,58
+2024-05-11,Saturday,Breakfast,Idli,119,0,0,Semester Holiday,58,0
+2024-05-12,Sunday,Breakfast,Poori,54,1,0,Semester Holiday,0,0
+2024-05-13,Monday,Breakfast,Upma,154,0,0,Semester Holiday,0,33
+2024-05-14,Tuesday,Breakfast,Pongal,172,0,0,Semester Holiday,33,25
+2024-05-15,Wednesday,Lunch,Chapati,186,0,0,Semester Holiday,25,123
+2024-05-16,Thursday,Lunch,Biryani,142,0,0,Semester Holiday,123,142
+2024-05-17,Friday,Dinner,Chapati,200,0,0,Semester Holiday,142,124
+2024-05-18,Saturday,Dinner,Parotta,102,0,0,Semester Holiday,124,45
+2024-05-19,Sunday,Dinner,Idli,102,1,0,Semester Holiday,45,0
+2024-05-20,Monday,Dinner,Chapati,193,0,1,Semester Holiday,0,130
+2024-05-21,Tuesday,Dinner,Idli,88,0,0,Semester Holiday,130,53
+2024-05-22,Wednesday,Lunch,Special Meals,83,0,0,Semester Holiday,53,83
+2024-05-23,Thursday,Lunch,Biryani,163,0,0,Semester Holiday,83,163
+2024-05-24,Friday,Lunch,South Indian Meals,200,0,0,Semester Holiday,163,177
+2024-05-25,Saturday,Breakfast,Upma,197,0,0,Semester Holiday,177,47
+2024-05-26,Sunday,Breakfast,Poori,129,1,0,Semester Holiday,47,0
+2024-05-27,Monday,Breakfast,Dosa,123,0,0,Semester Holiday,0,49
+2024-05-28,Tuesday,Breakfast,Idli,114,0,0,Semester Holiday,49,24
+2024-05-29,Wednesday,Lunch,Special Meals,110,0,0,Semester Holiday,24,110
+2024-05-30,Thursday,Dinner,Idli,175,0,1,Semester Holiday,110,119
+2024-05-31,Friday,Lunch,Biryani,190,0,0,Semester Holiday,119,190
+2024-06-01,Saturday,Breakfast,Dosa,89,0,0,Semester Holiday,190,5
+2024-06-02,Sunday,Lunch,South Indian Meals,51,1,1,Semester Holiday,5,2
+2024-06-03,Monday,Breakfast,Idli,152,0,0,Semester Holiday,2,49
+2024-06-04,Tuesday,Breakfast,Idli,97,0,0,Semester Holiday,49,7
+2024-06-05,Wednesday,Breakfast,Poori,189,0,0,Semester Holiday,7,91
+2024-06-06,Thursday,Breakfast,Poori,104,0,0,Semester Holiday,91,60
+2024-06-07,Friday,Dinner,Parotta,158,0,0,Semester Holiday,60,111
+2024-06-08,Saturday,Breakfast,Upma,92,0,0,Semester Holiday,111,0
+2024-06-09,Sunday,Dinner,Variety Rice,67,1,1,Semester Holiday,0,0
+2024-06-10,Monday,Dinner,Parotta,99,0,0,Semester Holiday,0,55
+2024-06-11,Tuesday,Dinner,Idli,118,0,0,Semester Holiday,55,68
+2024-06-12,Wednesday,Breakfast,Upma,190,0,0,Semester Holiday,68,26
+2024-06-13,Thursday,Lunch,South Indian Meals,158,0,0,Semester Holiday,26,138
+2024-06-14,Friday,Dinner,Parotta,157,0,0,Semester Holiday,138,100
+2024-06-15,Saturday,Dinner,Variety Rice,164,0,0,Semester Holiday,100,29
+2024-06-16,Sunday,Breakfast,Idli,112,1,0,Semester Holiday,29,0
+2024-06-17,Monday,Lunch,Biryani,148,0,0,Semester Holiday,0,148
+2024-06-18,Tuesday,Breakfast,Upma,183,0,0,Semester Holiday,148,70
+2024-06-19,Wednesday,Dinner,Variety Rice,146,0,0,Semester Holiday,70,90
+2024-06-20,Thursday,Breakfast,Poori,87,0,0,Semester Holiday,90,48
+2024-06-21,Friday,Lunch,Special Meals,172,0,0,Semester Holiday,48,172
+2024-06-22,Saturday,Dinner,Parotta,88,0,0,Semester Holiday,172,17
+2024-06-23,Sunday,Lunch,Chapati,46,1,0,Semester Holiday,17,0
+2024-06-24,Monday,Lunch,Special Meals,179,0,0,Semester Holiday,0,179
+2024-06-25,Tuesday,Breakfast,Poori,143,0,0,Semester Holiday,179,69
+2024-06-26,Wednesday,Breakfast,Dosa,93,0,0,Semester Holiday,69,33
+2024-06-27,Thursday,Dinner,Parotta,135,0,0,Semester Holiday,33,74
+2024-06-28,Friday,Dinner,Dosa,125,0,1,Semester Holiday,74,125
+2024-06-29,Saturday,Breakfast,Poori,170,0,0,Semester Holiday,125,10
+2024-06-30,Sunday,Lunch,South Indian Meals,49,1,0,Semester Holiday,10,0
+2024-07-01,Monday,Dinner,Parotta,587,0,0,Regular,0,448
+2024-07-02,Tuesday,Lunch,Variety Rice,531,0,0,Regular,448,513
+2024-07-03,Wednesday,Breakfast,Pongal,481,0,0,Regular,513,346
+2024-07-04,Thursday,Dinner,Parotta,472,0,0,Regular,346,379
+2024-07-05,Friday,Lunch,South Indian Meals,445,0,0,Regular,379,445
+2024-07-06,Saturday,Dinner,Variety Rice,394,0,0,Regular,445,223
+2024-07-07,Sunday,Dinner,Dosa,121,1,0,Regular,223,0
+2024-07-08,Monday,Breakfast,Upma,545,0,0,Regular,0,296
+2024-07-09,Tuesday,Dinner,Parotta,414,0,0,Regular,296,297
+2024-07-10,Wednesday,Breakfast,Dosa,521,0,0,Regular,297,336
+2024-07-11,Thursday,Breakfast,Pongal,546,0,0,Regular,336,323
+2024-07-12,Friday,Lunch,South Indian Meals,575,0,0,Regular,323,484
+2024-07-13,Saturday,Breakfast,Poori,335,0,0,Regular,484,177
+2024-07-14,Sunday,Dinner,Idli,83,1,0,Regular,177,0
+2024-07-15,Monday,Breakfast,Idli,451,0,0,Regular,0,265
+2024-07-16,Tuesday,Dinner,Dosa,578,0,0,Regular,265,398
+2024-07-17,Wednesday,Breakfast,Idli,432,0,0,Regular,398,268
+2024-07-18,Thursday,Dinner,Dosa,359,1,0,Regular,268,241
+2024-07-19,Friday,Dinner,Variety Rice,500,0,0,Regular,241,353
+2024-07-20,Saturday,Breakfast,Upma,379,0,0,Regular,353,156
+2024-07-21,Sunday,Breakfast,Dosa,101,1,0,Regular,156,0
+2024-07-22,Monday,Dinner,Dosa,552,0,0,Regular,0,337
+2024-07-23,Tuesday,Dinner,Chapati,496,0,1,Regular,337,407
+2024-07-24,Wednesday,Breakfast,Pongal,490,0,1,Regular,407,330
+2024-07-25,Thursday,Dinner,Idli,565,0,0,Regular,330,398
+2024-07-26,Friday,Lunch,South Indian Meals,546,0,0,Regular,398,468
+2024-07-27,Saturday,Dinner,Dosa,253,0,0,Regular,468,156
+2024-07-28,Sunday,Lunch,South Indian Meals,113,1,0,Regular,156,23
+2024-07-29,Monday,Breakfast,Dosa,565,0,0,Regular,23,314
+2024-07-30,Tuesday,Breakfast,Pongal,509,0,0,Regular,314,303
+2024-07-31,Wednesday,Breakfast,Idli,549,0,1,Regular,303,373
+2024-08-01,Thursday,Dinner,Chapati,538,0,0,Regular,373,423
+2024-08-02,Friday,Lunch,Special Meals,574,0,0,Regular,423,509
+2024-08-03,Saturday,Dinner,Parotta,304,0,0,Regular,509,239
+2024-08-04,Sunday,Breakfast,Idli,48,1,0,Regular,239,0
+2024-08-05,Monday,Dinner,Idli,508,0,0,Regular,0,339
+2024-08-06,Tuesday,Lunch,Biryani,409,0,0,Regular,339,398
+2024-08-07,Wednesday,Breakfast,Poori,557,0,0,Regular,398,367
+2024-08-08,Thursday,Lunch,Special Meals,483,0,0,Regular,367,480
+2024-08-09,Friday,Dinner,Idli,472,0,0,Regular,480,344
+2024-08-10,Saturday,Lunch,Variety Rice,292,0,0,Regular,344,206
+2024-08-11,Sunday,Lunch,Chapati,61,1,0,Regular,206,0
+2024-08-12,Monday,Lunch,Chapati,536,0,0,Regular,0,393
+2024-08-13,Tuesday,Lunch,Chapati,440,0,0,Regular,393,366
+2024-08-14,Wednesday,Breakfast,Poori,401,0,0,Regular,366,301
+2024-08-15,Thursday,Dinner,Parotta,474,0,0,Regular,301,321
+2024-08-16,Friday,Breakfast,Dosa,474,0,0,Regular,321,359
+2024-08-17,Saturday,Dinner,Parotta,287,0,0,Regular,359,194
+2024-08-18,Sunday,Dinner,Dosa,109,1,1,Regular,194,0
+2024-08-19,Monday,Breakfast,Poori,358,1,0,Regular,0,157
+2024-08-20,Tuesday,Lunch,Variety Rice,418,1,0,Regular,157,299
+2024-08-21,Wednesday,Breakfast,Upma,454,0,0,Regular,299,270
+2024-08-22,Thursday,Breakfast,Idli,530,0,0,Regular,270,344
+2024-08-23,Friday,Lunch,Chapati,469,0,0,Regular,344,429
+2024-08-24,Saturday,Dinner,Dosa,281,0,0,Regular,429,198
+2024-08-25,Sunday,Dinner,Dosa,59,1,0,Regular,198,0
+2024-08-26,Monday,Dinner,Chapati,531,0,0,Regular,0,323
+2024-08-27,Tuesday,Breakfast,Poori,449,0,0,Regular,323,265
+2024-08-28,Wednesday,Breakfast,Dosa,454,0,0,Regular,265,312
+2024-08-29,Thursday,Breakfast,Poori,575,0,0,Regular,312,446
+2024-08-30,Friday,Dinner,Idli,459,0,0,Regular,446,325
+2024-08-31,Saturday,Lunch,Special Meals,255,0,0,Regular,325,231
+2024-09-01,Sunday,Dinner,Dosa,89,1,0,Regular,231,0
+2024-09-02,Monday,Breakfast,Upma,475,0,0,Regular,0,228
+2024-09-03,Tuesday,Dinner,Idli,571,0,0,Regular,228,416
+2024-09-04,Wednesday,Lunch,Special Meals,545,0,0,Regular,416,486
+2024-09-05,Thursday,Lunch,Biryani,431,0,0,Regular,486,431
+2024-09-06,Friday,Lunch,Chapati,556,0,0,Regular,431,511
+2024-09-07,Saturday,Lunch,Special Meals,371,0,0,Regular,511,341
+2024-09-08,Sunday,Breakfast,Poori,152,1,0,Regular,341,0
+2024-09-09,Monday,Lunch,Variety Rice,521,0,0,Regular,0,433
+2024-09-10,Tuesday,Dinner,Chapati,506,0,0,Regular,433,353
+2024-09-11,Wednesday,Breakfast,Poori,580,0,0,Regular,353,389
+2024-09-12,Thursday,Breakfast,Idli,452,0,0,Regular,389,260
+2024-09-13,Friday,Breakfast,Poori,533,0,0,Regular,260,354
+2024-09-14,Saturday,Lunch,Variety Rice,283,0,0,Regular,354,230
+2024-09-15,Sunday,Lunch,South Indian Meals,70,1,0,Regular,230,0
+2024-09-16,Monday,Dinner,Chapati,590,0,0,Regular,0,381
+2024-09-17,Tuesday,Dinner,Parotta,517,0,1,Regular,381,407
+2024-09-18,Wednesday,Dinner,Dosa,451,0,0,Regular,407,337
+2024-09-19,Thursday,Breakfast,Dosa,574,0,0,Regular,337,408
+2024-09-20,Friday,Breakfast,Dosa,572,0,0,Regular,408,432
+2024-09-21,Saturday,Dinner,Variety Rice,331,0,1,Regular,432,251
+2024-09-22,Sunday,Breakfast,Idli,61,1,0,Regular,251,0
+2024-09-23,Monday,Dinner,Variety Rice,445,0,1,Regular,0,336
+2024-09-24,Tuesday,Lunch,Variety Rice,535,0,0,Regular,336,452
+2024-09-25,Wednesday,Lunch,Biryani,431,0,0,Regular,452,409
+2024-09-26,Thursday,Breakfast,Poori,508,0,0,Regular,409,379
+2024-09-27,Friday,Breakfast,Idli,500,0,0,Regular,379,391
+2024-09-28,Saturday,Breakfast,Dosa,306,0,0,Regular,391,169
+2024-09-29,Sunday,Lunch,South Indian Meals,60,1,0,Regular,169,0
+2024-09-30,Monday,Lunch,Chapati,597,0,0,Regular,0,409
+2024-10-01,Tuesday,Breakfast,Poori,573,0,0,Regular,409,396
+2024-10-02,Wednesday,Lunch,Variety Rice,426,0,1,Regular,396,411
+2024-10-03,Thursday,Lunch,Variety Rice,459,0,0,Regular,411,430
+2024-10-04,Friday,Lunch,Special Meals,418,0,0,Regular,430,418
+2024-10-05,Saturday,Breakfast,Dosa,288,0,0,Regular,418,142
+2024-10-06,Sunday,Lunch,Variety Rice,70,1,0,Regular,142,1
+2024-10-07,Monday,Breakfast,Pongal,538,0,0,Regular,1,316
+2024-10-08,Tuesday,Dinner,Variety Rice,526,0,0,Regular,316,325
+2024-10-09,Wednesday,Lunch,Biryani,537,0,0,Regular,325,466
+2024-10-10,Thursday,Lunch,Chapati,426,0,0,Regular,466,378
+2024-10-11,Friday,Lunch,South Indian Meals,598,0,0,Regular,378,564
+2024-10-12,Saturday,Breakfast,Dosa,368,0,0,Regular,564,269
+2024-10-13,Sunday,Dinner,Variety Rice,84,1,0,Regular,269,0
+2024-10-14,Monday,Lunch,Special Meals,510,0,0,Regular,0,402
+2024-10-15,Tuesday,Dinner,Idli,469,0,0,Regular,402,306
+2024-10-16,Wednesday,Dinner,Variety Rice,431,0,0,Regular,306,307
+2024-10-17,Thursday,Breakfast,Poori,516,0,0,Regular,307,321
+2024-10-18,Friday,Breakfast,Pongal,578,0,0,Regular,321,316
+2024-10-19,Saturday,Lunch,Biryani,386,0,0,Regular,316,328
+2024-10-20,Sunday,Lunch,South Indian Meals,68,1,0,Regular,328,35
+2024-10-21,Monday,Breakfast,Idli,530,0,0,Regular,35,277
+2024-10-22,Tuesday,Lunch,Special Meals,596,0,0,Regular,277,472
+2024-10-23,Wednesday,Dinner,Idli,581,0,0,Regular,472,441
+2024-10-24,Thursday,Lunch,Special Meals,494,0,0,Regular,441,451
+2024-10-25,Friday,Lunch,South Indian Meals,554,0,0,Regular,451,549
+2024-10-26,Saturday,Dinner,Variety Rice,363,0,0,Regular,549,216
+2024-10-27,Sunday,Breakfast,Pongal,115,1,0,Regular,216,0
+2024-10-28,Monday,Dinner,Chapati,554,0,0,Regular,0,322
+2024-10-29,Tuesday,Breakfast,Upma,585,0,0,Regular,322,398
+2024-10-30,Wednesday,Breakfast,Dosa,536,0,0,Regular,398,402
+2024-10-31,Thursday,Breakfast,Idli,553,0,0,Regular,402,367
+2024-11-01,Friday,Dinner,Parotta,408,0,0,Exam Period,367,292
+2024-11-02,Saturday,Dinner,Chapati,412,0,0,Exam Period,292,244
+2024-11-03,Sunday,Lunch,Biryani,195,1,0,Exam Period,244,86
+2024-11-04,Monday,Breakfast,Pongal,410,0,0,Exam Period,86,241
+2024-11-05,Tuesday,Breakfast,Upma,336,0,0,Exam Period,241,178
+2024-11-06,Wednesday,Dinner,Parotta,422,0,0,Exam Period,178,259
+2024-11-07,Thursday,Lunch,Chapati,402,0,1,Exam Period,259,358
+2024-11-08,Friday,Lunch,Chapati,307,0,0,Exam Period,358,307
+2024-11-09,Saturday,Lunch,Biryani,199,1,0,Exam Period,307,177
+2024-11-10,Sunday,Lunch,South Indian Meals,212,1,0,Exam Period,177,94
+2024-11-11,Monday,Dinner,Dosa,407,0,0,Exam Period,94,239
+2024-11-12,Tuesday,Lunch,Biryani,395,0,0,Exam Period,239,332
+2024-11-13,Wednesday,Dinner,Chapati,327,0,0,Exam Period,332,223
+2024-11-14,Thursday,Lunch,Chapati,405,0,0,Exam Period,223,299
+2024-11-15,Friday,Dinner,Chapati,327,0,0,Exam Period,299,212
+2024-11-16,Saturday,Breakfast,Idli,258,1,0,Exam Period,212,84
+2024-11-17,Sunday,Breakfast,Dosa,222,1,0,Exam Period,84,4
+2024-11-18,Monday,Dinner,Chapati,338,0,0,Exam Period,4,192
+2024-11-19,Tuesday,Lunch,Special Meals,426,0,0,Exam Period,192,313
+2024-11-20,Wednesday,Dinner,Idli,440,0,0,Exam Period,313,270
+2024-11-21,Thursday,Breakfast,Upma,267,0,0,Exam Period,270,141
+2024-11-22,Friday,Lunch,South Indian Meals,342,0,0,Exam Period,141,280
+2024-11-23,Saturday,Dinner,Parotta,311,0,0,Exam Period,280,188
+2024-11-24,Sunday,Dinner,Variety Rice,354,1,0,Exam Period,188,109
+2024-11-25,Monday,Breakfast,Upma,448,0,0,Exam Period,109,262
+2024-11-26,Tuesday,Breakfast,Poori,431,0,0,Exam Period,262,259
+2024-11-27,Wednesday,Breakfast,Dosa,448,0,0,Exam Period,259,304
+2024-11-28,Thursday,Lunch,Chapati,318,0,0,Exam Period,304,314
+2024-11-29,Friday,Lunch,Variety Rice,273,0,0,Exam Period,314,273
+2024-11-30,Saturday,Lunch,South Indian Meals,436,0,0,Exam Period,273,300
+2024-12-01,Sunday,Lunch,Variety Rice,47,1,0,Regular,300,2
+2024-12-02,Monday,Breakfast,Poori,444,0,0,Regular,2,258
+2024-12-03,Tuesday,Breakfast,Upma,456,0,0,Regular,258,250
+2024-12-04,Wednesday,Lunch,Biryani,431,0,0,Regular,250,431
+2024-12-05,Thursday,Breakfast,Poori,503,0,0,Regular,431,385
+2024-12-06,Friday,Lunch,Variety Rice,472,0,0,Regular,385,446
+2024-12-07,Saturday,Dinner,Variety Rice,315,0,0,Regular,446,185
+2024-12-08,Sunday,Breakfast,Poori,75,1,0,Regular,185,0
+2024-12-09,Monday,Lunch,Biryani,493,0,0,Regular,0,399
+2024-12-10,Tuesday,Dinner,Dosa,600,0,0,Regular,399,483
+2024-12-11,Wednesday,Breakfast,Idli,441,0,0,Regular,483,273
+2024-12-12,Thursday,Lunch,Variety Rice,455,0,0,Regular,273,367
+2024-12-13,Friday,Lunch,Biryani,481,0,0,Regular,367,470
+2024-12-14,Saturday,Dinner,Parotta,384,0,0,Regular,470,300
+2024-12-15,Sunday,Dinner,Parotta,125,1,0,Regular,300,11
+2024-12-16,Monday,Dinner,Dosa,442,1,0,Regular,11,242
+2024-12-17,Tuesday,Dinner,Dosa,406,0,1,Regular,242,349
+2024-12-18,Wednesday,Dinner,Parotta,581,0,1,Regular,349,496
+2024-12-19,Thursday,Breakfast,Dosa,405,0,0,Regular,496,309
+2024-12-20,Friday,Breakfast,Dosa,321,1,0,Regular,309,194
+2024-12-21,Saturday,Dinner,Dosa,262,0,0,Regular,194,156
+2024-12-22,Sunday,Dinner,Dosa,86,1,0,Regular,156,0
+2024-12-23,Monday,Breakfast,Poori,493,0,0,Regular,0,314
+2024-12-24,Tuesday,Breakfast,Pongal,426,0,0,Regular,314,251
+2024-12-25,Wednesday,Breakfast,Pongal,516,0,0,Regular,251,338
+2024-12-26,Thursday,Breakfast,Dosa,593,0,0,Regular,338,352
+2024-12-27,Friday,Dinner,Dosa,323,1,1,Regular,352,302
+2024-12-28,Saturday,Lunch,Biryani,364,0,1,Regular,302,327
+2024-12-29,Sunday,Lunch,Special Meals,90,1,0,Regular,327,69
+2024-12-30,Monday,Breakfast,Poori,525,0,0,Regular,69,345
+2024-12-31,Tuesday,Breakfast,Idli,534,0,0,Regular,345,390
+2025-01-01,Wednesday,Lunch,Chapati,428,0,0,Regular,390,390
+2025-01-02,Thursday,Lunch,Biryani,554,0,0,Regular,390,502
+2025-01-03,Friday,Lunch,Biryani,504,0,0,Regular,502,504
+2025-01-04,Saturday,Lunch,South Indian Meals,398,0,0,Regular,504,356
+2025-01-05,Sunday,Dinner,Dosa,77,1,0,Regular,356,17
+2025-01-06,Monday,Dinner,Dosa,482,0,0,Regular,17,271
+2025-01-07,Tuesday,Breakfast,Idli,475,0,0,Regular,271,315
+2025-01-08,Wednesday,Breakfast,Idli,599,0,1,Regular,315,401
+2025-01-09,Thursday,Breakfast,Upma,464,0,1,Regular,401,349
+2025-01-10,Friday,Breakfast,Dosa,434,0,1,Regular,349,309
+2025-01-11,Saturday,Breakfast,Dosa,342,0,0,Regular,309,155
+2025-01-12,Sunday,Dinner,Variety Rice,124,1,0,Regular,155,0
+2025-01-13,Monday,Lunch,Special Meals,551,0,1,Regular,0,478
+2025-01-14,Tuesday,Dinner,Chapati,444,0,0,Regular,478,382
+2025-01-15,Wednesday,Breakfast,Dosa,482,0,0,Regular,382,306
+2025-01-16,Thursday,Dinner,Idli,456,0,0,Regular,306,342
+2025-01-17,Friday,Lunch,Chapati,475,0,0,Regular,342,403
+2025-01-18,Saturday,Lunch,Biryani,360,0,0,Regular,403,343
+2025-01-19,Sunday,Breakfast,Idli,95,1,0,Regular,343,0
+2025-01-20,Monday,Lunch,Biryani,562,0,0,Regular,0,494
+2025-01-21,Tuesday,Dinner,Chapati,595,0,0,Regular,494,464
+2025-01-22,Wednesday,Breakfast,Dosa,419,0,0,Regular,464,308
+2025-01-23,Thursday,Dinner,Chapati,583,0,0,Regular,308,408
+2025-01-24,Friday,Dinner,Dosa,540,0,0,Regular,408,456
+2025-01-25,Saturday,Lunch,South Indian Meals,287,0,0,Regular,456,261
+2025-01-26,Sunday,Lunch,Variety Rice,117,1,0,Regular,261,49
+2025-01-27,Monday,Breakfast,Upma,549,0,0,Regular,49,334
+2025-01-28,Tuesday,Breakfast,Idli,545,0,0,Regular,334,343
+2025-01-29,Wednesday,Lunch,Special Meals,482,0,0,Regular,343,410
+2025-01-30,Thursday,Lunch,Biryani,504,0,0,Regular,410,504
+2025-01-31,Friday,Breakfast,Upma,524,0,0,Regular,504,345
+2025-02-01,Saturday,Dinner,Dosa,318,0,0,Regular,345,159
+2025-02-02,Sunday,Breakfast,Pongal,123,1,0,Regular,159,0
+2025-02-03,Monday,Dinner,Variety Rice,431,0,0,Regular,0,260
+2025-02-04,Tuesday,Lunch,Variety Rice,511,0,0,Regular,260,425
+2025-02-05,Wednesday,Lunch,Special Meals,428,0,0,Regular,425,416
+2025-02-06,Thursday,Breakfast,Dosa,522,0,1,Regular,416,383
+2025-02-07,Friday,Lunch,South Indian Meals,480,0,0,Regular,383,478
+2025-02-08,Saturday,Lunch,South Indian Meals,300,0,0,Regular,478,262
+2025-02-09,Sunday,Dinner,Idli,111,1,0,Regular,262,0
+2025-02-10,Monday,Lunch,Special Meals,583,0,0,Regular,0,516
+2025-02-11,Tuesday,Lunch,Biryani,457,0,0,Regular,516,457
+2025-02-12,Wednesday,Breakfast,Idli,426,0,0,Regular,457,296
+2025-02-13,Thursday,Breakfast,Dosa,544,0,0,Regular,296,339
+2025-02-14,Friday,Breakfast,Idli,509,0,0,Regular,339,374
+2025-02-15,Saturday,Breakfast,Idli,388,0,0,Regular,374,198
+2025-02-16,Sunday,Breakfast,Dosa,91,1,0,Regular,198,0
+2025-02-17,Monday,Dinner,Idli,458,0,0,Regular,0,255
+2025-02-18,Tuesday,Dinner,Parotta,519,0,0,Regular,255,373
+2025-02-19,Wednesday,Breakfast,Poori,414,0,0,Regular,373,312
+2025-02-20,Thursday,Dinner,Chapati,493,0,0,Regular,312,377
+2025-02-21,Friday,Lunch,Biryani,448,0,0,Regular,377,448
+2025-02-22,Saturday,Breakfast,Dosa,379,0,0,Regular,448,188
+2025-02-23,Sunday,Breakfast,Idli,67,1,1,Regular,188,0
+2025-02-24,Monday,Lunch,Variety Rice,544,0,0,Regular,0,387
+2025-02-25,Tuesday,Lunch,Special Meals,475,0,0,Regular,387,463
+2025-02-26,Wednesday,Lunch,Variety Rice,592,0,0,Regular,463,551
+2025-02-27,Thursday,Dinner,Parotta,580,0,0,Regular,551,464
+2025-02-28,Friday,Breakfast,Dosa,454,0,0,Regular,464,366
+2025-03-01,Saturday,Lunch,Special Meals,303,0,0,Regular,366,264
+2025-03-02,Sunday,Dinner,Dosa,98,1,0,Regular,264,7
+2025-03-03,Monday,Dinner,Chapati,482,0,0,Regular,7,281
+2025-03-04,Tuesday,Breakfast,Dosa,562,0,0,Regular,281,388
+2025-03-05,Wednesday,Lunch,South Indian Meals,517,0,0,Regular,388,464
+2025-03-06,Thursday,Lunch,Special Meals,598,0,0,Regular,464,595
+2025-03-07,Friday,Breakfast,Poori,449,0,0,Regular,595,352
+2025-03-08,Saturday,Breakfast,Idli,288,0,0,Regular,352,140
+2025-03-09,Sunday,Lunch,South Indian Meals,74,1,0,Regular,140,0
+2025-03-10,Monday,Lunch,Variety Rice,401,1,0,Regular,0,256
+2025-03-11,Tuesday,Dinner,Idli,590,0,0,Regular,256,358
+2025-03-12,Wednesday,Dinner,Idli,540,0,0,Regular,358,401
+2025-03-13,Thursday,Dinner,Variety Rice,593,0,0,Regular,401,463
+2025-03-14,Friday,Lunch,Variety Rice,522,0,0,Regular,463,452
+2025-03-15,Saturday,Breakfast,Upma,343,0,0,Regular,452,175
+2025-03-16,Sunday,Dinner,Dosa,92,1,0,Regular,175,0
+2025-03-17,Monday,Breakfast,Upma,457,0,0,Regular,0,251
+2025-03-18,Tuesday,Breakfast,Pongal,575,0,0,Regular,251,339
+2025-03-19,Wednesday,Dinner,Dosa,581,0,0,Regular,339,450
+2025-03-20,Thursday,Lunch,Chapati,547,0,0,Regular,450,454
+2025-03-21,Friday,Breakfast,Poori,488,0,0,Regular,454,399
+2025-03-22,Saturday,Breakfast,Poori,277,0,0,Regular,399,136
+2025-03-23,Sunday,Lunch,South Indian Meals,97,1,0,Regular,136,28
+2025-03-24,Monday,Lunch,Special Meals,420,0,0,Regular,28,382
+2025-03-25,Tuesday,Lunch,Biryani,419,0,0,Regular,382,414
+2025-03-26,Wednesday,Breakfast,Idli,508,0,0,Regular,414,275
+2025-03-27,Thursday,Lunch,Variety Rice,478,0,0,Regular,275,401
+2025-03-28,Friday,Breakfast,Idli,564,0,0,Regular,401,423
+2025-03-29,Saturday,Dinner,Parotta,279,0,0,Regular,423,196
+2025-03-30,Sunday,Breakfast,Dosa,80,1,0,Regular,196,0
+2025-03-31,Monday,Lunch,Chapati,456,0,0,Regular,0,315
+2025-04-01,Tuesday,Lunch,South Indian Meals,284,0,0,Exam Period,315,275
+2025-04-02,Wednesday,Dinner,Dosa,269,0,0,Exam Period,275,166
+2025-04-03,Thursday,Lunch,Chapati,280,0,0,Exam Period,166,241
+2025-04-04,Friday,Breakfast,Pongal,285,1,0,Exam Period,241,149
+2025-04-05,Saturday,Lunch,South Indian Meals,410,0,0,Exam Period,149,238
+2025-04-06,Sunday,Lunch,Variety Rice,182,1,0,Exam Period,238,40
+2025-04-07,Monday,Lunch,Biryani,434,0,1,Exam Period,40,380
+2025-04-08,Tuesday,Dinner,Idli,350,0,0,Exam Period,380,250
+2025-04-09,Wednesday,Breakfast,Dosa,310,0,1,Exam Period,250,194
+2025-04-10,Thursday,Breakfast,Poori,345,0,1,Exam Period,194,234
+2025-04-11,Friday,Breakfast,Upma,405,0,0,Exam Period,234,256
+2025-04-12,Saturday,Dinner,Parotta,391,0,0,Exam Period,256,173
+2025-04-13,Sunday,Breakfast,Pongal,200,1,0,Exam Period,173,0
+2025-04-14,Monday,Dinner,Dosa,415,0,0,Exam Period,0,230
+2025-04-15,Tuesday,Lunch,Special Meals,329,0,0,Exam Period,230,264
+2025-04-16,Wednesday,Lunch,Variety Rice,302,0,0,Exam Period,264,287
+2025-04-17,Thursday,Dinner,Chapati,317,0,0,Exam Period,287,221
+2025-04-18,Friday,Breakfast,Idli,265,0,0,Exam Period,221,134
+2025-04-19,Saturday,Dinner,Dosa,339,0,0,Exam Period,134,136
+2025-04-20,Sunday,Dinner,Idli,270,1,0,Exam Period,136,48
+2025-04-21,Monday,Dinner,Chapati,318,0,0,Exam Period,48,192
+2025-04-22,Tuesday,Lunch,Variety Rice,289,0,1,Exam Period,192,239
+2025-04-23,Wednesday,Breakfast,Pongal,346,0,1,Exam Period,239,230
+2025-04-24,Thursday,Breakfast,Idli,297,0,0,Exam Period,230,154
+2025-04-25,Friday,Breakfast,Pongal,291,0,0,Exam Period,154,193
+2025-04-26,Saturday,Dinner,Chapati,308,0,0,Exam Period,193,154
+2025-04-27,Sunday,Lunch,Chapati,320,1,0,Exam Period,154,131
+2025-04-28,Monday,Breakfast,Dosa,353,0,0,Exam Period,131,244
+2025-04-29,Tuesday,Lunch,Variety Rice,259,0,0,Exam Period,244,232
+2025-04-30,Wednesday,Lunch,Special Meals,341,0,0,Exam Period,232,309
+2025-05-01,Thursday,Dinner,Idli,97,0,0,Semester Holiday,309,92
+2025-05-02,Friday,Lunch,Special Meals,174,0,0,Semester Holiday,92,174
+2025-05-03,Saturday,Dinner,Parotta,50,1,0,Semester Holiday,174,15
+2025-05-04,Sunday,Dinner,Chapati,85,1,0,Semester Holiday,15,0
+2025-05-05,Monday,Lunch,South Indian Meals,148,0,0,Semester Holiday,0,148
+2025-05-06,Tuesday,Dinner,Variety Rice,199,0,0,Semester Holiday,148,113
+2025-05-07,Wednesday,Dinner,Dosa,129,0,0,Semester Holiday,113,95
+2025-05-08,Thursday,Dinner,Dosa,97,0,0,Semester Holiday,95,69
+2025-05-09,Friday,Lunch,Special Meals,115,0,0,Semester Holiday,69,115
+2025-05-10,Saturday,Breakfast,Poori,190,0,0,Semester Holiday,115,57
+2025-05-11,Sunday,Lunch,Biryani,126,1,0,Semester Holiday,57,30
+2025-05-12,Monday,Dinner,Dosa,160,0,1,Semester Holiday,30,142
+2025-05-13,Tuesday,Dinner,Dosa,110,0,0,Semester Holiday,142,60
+2025-05-14,Wednesday,Breakfast,Poori,151,0,0,Semester Holiday,60,66
+2025-05-15,Thursday,Dinner,Variety Rice,95,0,0,Semester Holiday,66,48
+2025-05-16,Friday,Lunch,Biryani,95,0,0,Semester Holiday,48,95
+2025-05-17,Saturday,Lunch,Biryani,117,0,0,Semester Holiday,95,103
+2025-05-18,Sunday,Dinner,Idli,118,1,0,Semester Holiday,103,0
+2025-05-19,Monday,Lunch,South Indian Meals,132,0,0,Semester Holiday,0,112
+2025-05-20,Tuesday,Dinner,Variety Rice,110,0,0,Semester Holiday,112,69
+2025-05-21,Wednesday,Lunch,Chapati,112,0,0,Semester Holiday,69,96
+2025-05-22,Thursday,Breakfast,Upma,182,0,0,Semester Holiday,96,83
+2025-05-23,Friday,Lunch,South Indian Meals,88,0,0,Semester Holiday,83,88
+2025-05-24,Saturday,Dinner,Parotta,181,0,0,Semester Holiday,88,39
+2025-05-25,Sunday,Lunch,Biryani,62,1,0,Semester Holiday,39,8
+2025-05-26,Monday,Lunch,Variety Rice,159,0,0,Semester Holiday,8,132
+2025-05-27,Tuesday,Lunch,Variety Rice,166,0,0,Semester Holiday,132,131
+2025-05-28,Wednesday,Dinner,Variety Rice,75,1,0,Semester Holiday,131,26
+2025-05-29,Thursday,Dinner,Dosa,143,0,0,Semester Holiday,26,84
+2025-05-30,Friday,Breakfast,Dosa,112,0,0,Semester Holiday,84,83
+2025-05-31,Saturday,Lunch,Variety Rice,153,0,0,Semester Holiday,83,96
+2025-06-01,Sunday,Lunch,Variety Rice,51,1,0,Semester Holiday,96,0
+2025-06-02,Monday,Dinner,Chapati,102,0,1,Semester Holiday,0,95
+2025-06-03,Tuesday,Lunch,Chapati,180,0,0,Semester Holiday,95,143
+2025-06-04,Wednesday,Lunch,South Indian Meals,179,0,1,Semester Holiday,143,155
+2025-06-05,Thursday,Lunch,Variety Rice,148,0,0,Semester Holiday,155,148
+2025-06-06,Friday,Lunch,Biryani,191,0,0,Semester Holiday,148,191
+2025-06-07,Saturday,Dinner,Dosa,99,0,0,Semester Holiday,191,22
+2025-06-08,Sunday,Breakfast,Pongal,144,1,0,Semester Holiday,22,0
+2025-06-09,Monday,Lunch,Special Meals,153,0,0,Semester Holiday,0,149
+2025-06-10,Tuesday,Lunch,Variety Rice,101,0,0,Semester Holiday,149,101
+2025-06-11,Wednesday,Breakfast,Pongal,170,0,0,Semester Holiday,101,24
+2025-06-12,Thursday,Breakfast,Pongal,98,0,0,Semester Holiday,24,25
+2025-06-13,Friday,Lunch,South Indian Meals,117,0,1,Semester Holiday,25,117
+2025-06-14,Saturday,Breakfast,Dosa,91,0,0,Semester Holiday,117,11
+2025-06-15,Sunday,Dinner,Chapati,124,1,0,Semester Holiday,11,0
+2025-06-16,Monday,Dinner,Parotta,136,0,0,Semester Holiday,0,68
+2025-06-17,Tuesday,Lunch,Chapati,118,0,0,Semester Holiday,68,103
+2025-06-18,Wednesday,Lunch,Variety Rice,179,0,0,Semester Holiday,103,111
+2025-06-19,Thursday,Breakfast,Dosa,106,0,0,Semester Holiday,111,36
+2025-06-20,Friday,Breakfast,Pongal,133,0,0,Semester Holiday,36,28
+2025-06-21,Saturday,Dinner,Dosa,122,0,0,Semester Holiday,28,6
+2025-06-22,Sunday,Lunch,Variety Rice,151,1,0,Semester Holiday,6,15
+2025-06-23,Monday,Lunch,Variety Rice,133,0,0,Semester Holiday,15,122
+2025-06-24,Tuesday,Breakfast,Pongal,134,0,1,Semester Holiday,122,81
+2025-06-25,Wednesday,Lunch,Special Meals,160,0,0,Semester Holiday,81,131
+2025-06-26,Thursday,Breakfast,Dosa,101,0,1,Semester Holiday,131,79
+2025-06-27,Friday,Lunch,South Indian Meals,135,0,0,Semester Holiday,79,128
+2025-06-28,Saturday,Breakfast,Dosa,106,0,0,Semester Holiday,128,8
+2025-06-29,Sunday,Breakfast,Poori,114,1,0,Semester Holiday,8,0
+2025-06-30,Monday,Dinner,Idli,81,0,0,Semester Holiday,0,53
+2025-07-01,Tuesday,Breakfast,Idli,562,0,0,Regular,53,317
+2025-07-02,Wednesday,Dinner,Idli,558,0,0,Regular,317,327
+2025-07-03,Thursday,Breakfast,Pongal,591,0,0,Regular,327,333
+2025-07-04,Friday,Dinner,Variety Rice,417,0,0,Regular,333,324
+2025-07-05,Saturday,Dinner,Dosa,353,0,1,Regular,324,240
+2025-07-06,Sunday,Lunch,Variety Rice,116,1,0,Regular,240,34
+2025-07-07,Monday,Breakfast,Upma,504,0,0,Regular,34,315
+2025-07-08,Tuesday,Breakfast,Upma,551,0,0,Regular,315,376
+2025-07-09,Wednesday,Lunch,Chapati,438,0,0,Regular,376,395
+2025-07-10,Thursday,Breakfast,Upma,524,0,0,Regular,395,306
+2025-07-11,Friday,Dinner,Parotta,571,0,0,Regular,306,463
+2025-07-12,Saturday,Breakfast,Pongal,315,0,0,Regular,463,151
+2025-07-13,Sunday,Dinner,Parotta,73,1,0,Regular,151,0
+2025-07-14,Monday,Lunch,South Indian Meals,582,0,0,Regular,0,461
+2025-07-15,Tuesday,Lunch,Chapati,458,0,1,Regular,461,458
+2025-07-16,Wednesday,Dinner,Variety Rice,583,0,0,Regular,458,414
+2025-07-17,Thursday,Lunch,Special Meals,532,0,0,Regular,414,519
+2025-07-18,Friday,Breakfast,Idli,466,0,0,Regular,519,362
+2025-07-19,Saturday,Breakfast,Upma,264,0,0,Regular,362,68
+2025-07-20,Sunday,Dinner,Parotta,51,1,0,Regular,68,0
+2025-07-21,Monday,Dinner,Chapati,477,0,0,Regular,0,284
+2025-07-22,Tuesday,Dinner,Dosa,545,0,1,Regular,284,488
+2025-07-23,Wednesday,Dinner,Chapati,516,0,0,Regular,488,411
+2025-07-24,Thursday,Breakfast,Upma,558,0,0,Regular,411,399
+2025-07-25,Friday,Breakfast,Idli,449,0,0,Regular,399,287
+2025-07-26,Saturday,Breakfast,Idli,276,0,0,Regular,287,103
+2025-07-27,Sunday,Lunch,South Indian Meals,73,1,0,Regular,103,0
+2025-07-28,Monday,Lunch,South Indian Meals,550,0,0,Regular,0,396
+2025-07-29,Tuesday,Breakfast,Idli,391,1,0,Regular,396,219
+2025-07-30,Wednesday,Breakfast,Upma,552,0,0,Regular,219,266
+2025-07-31,Thursday,Lunch,Chapati,437,0,0,Regular,266,404
+2025-08-01,Friday,Dinner,Parotta,503,0,0,Regular,404,420
+2025-08-02,Saturday,Lunch,Biryani,394,0,0,Regular,420,344
+2025-08-03,Sunday,Lunch,Special Meals,135,1,0,Regular,344,96
+2025-08-04,Monday,Dinner,Chapati,446,0,0,Regular,96,282
+2025-08-05,Tuesday,Lunch,Chapati,414,0,0,Regular,282,359
+2025-08-06,Wednesday,Breakfast,Dosa,414,0,0,Regular,359,256
+2025-08-07,Thursday,Dinner,Chapati,424,0,0,Regular,256,324
+2025-08-08,Friday,Breakfast,Pongal,429,0,0,Regular,324,283
+2025-08-09,Saturday,Dinner,Dosa,265,0,1,Regular,283,192
+2025-08-10,Sunday,Dinner,Parotta,144,1,1,Regular,192,68
+2025-08-11,Monday,Dinner,Variety Rice,481,0,0,Regular,68,273
+2025-08-12,Tuesday,Breakfast,Idli,452,0,0,Regular,273,259
+2025-08-13,Wednesday,Breakfast,Dosa,586,0,0,Regular,259,392
+2025-08-14,Thursday,Dinner,Chapati,538,0,0,Regular,392,415
+2025-08-15,Friday,Lunch,Biryani,575,0,0,Regular,415,504
+2025-08-16,Saturday,Lunch,Biryani,336,0,0,Regular,504,319
+2025-08-17,Sunday,Dinner,Idli,95,1,0,Regular,319,0
+2025-08-18,Monday,Breakfast,Poori,459,0,0,Regular,0,245
+2025-08-19,Tuesday,Breakfast,Upma,532,0,1,Regular,245,377
+2025-08-20,Wednesday,Lunch,Chapati,446,0,0,Regular,377,361
+2025-08-21,Thursday,Lunch,Biryani,512,0,0,Regular,361,491
+2025-08-22,Friday,Breakfast,Dosa,503,0,0,Regular,491,404
+2025-08-23,Saturday,Dinner,Idli,364,0,0,Regular,404,228
+2025-08-24,Sunday,Dinner,Dosa,54,1,0,Regular,228,0
+2025-08-25,Monday,Breakfast,Poori,541,0,0,Regular,0,345
+2025-08-26,Tuesday,Dinner,Variety Rice,579,0,0,Regular,345,443
+2025-08-27,Wednesday,Breakfast,Pongal,514,0,0,Regular,443,344
+2025-08-28,Thursday,Lunch,Biryani,556,0,0,Regular,344,525
+2025-08-29,Friday,Lunch,Special Meals,509,0,1,Regular,525,509
+2025-08-30,Saturday,Dinner,Variety Rice,336,0,0,Regular,509,238
+2025-08-31,Sunday,Breakfast,Dosa,63,1,0,Regular,238,0
+2025-09-01,Monday,Dinner,Variety Rice,475,0,0,Regular,0,281
+2025-09-02,Tuesday,Lunch,Special Meals,481,0,1,Regular,281,481
+2025-09-03,Wednesday,Dinner,Chapati,534,0,0,Regular,481,424
+2025-09-04,Thursday,Dinner,Parotta,462,0,0,Regular,424,386
+2025-09-05,Friday,Lunch,Biryani,509,0,1,Regular,386,509
+2025-09-06,Saturday,Dinner,Parotta,370,0,0,Regular,509,296
+2025-09-07,Sunday,Lunch,Special Meals,95,1,0,Regular,296,74
+2025-09-08,Monday,Lunch,South Indian Meals,459,0,0,Regular,74,350
+2025-09-09,Tuesday,Dinner,Parotta,527,0,0,Regular,350,421
+2025-09-10,Wednesday,Dinner,Dosa,404,0,0,Regular,421,348
+2025-09-11,Thursday,Dinner,Chapati,513,0,1,Regular,348,418
+2025-09-12,Friday,Dinner,Dosa,507,0,0,Regular,418,401
+2025-09-13,Saturday,Lunch,Chapati,352,0,0,Regular,401,268
+2025-09-14,Sunday,Lunch,Biryani,86,1,0,Regular,268,64
+2025-09-15,Monday,Breakfast,Idli,518,0,0,Regular,64,263
+2025-09-16,Tuesday,Breakfast,Poori,469,0,0,Regular,263,274
+2025-09-17,Wednesday,Lunch,Chapati,557,0,0,Regular,274,418
+2025-09-18,Thursday,Lunch,South Indian Meals,549,0,0,Regular,418,466
+2025-09-19,Friday,Lunch,South Indian Meals,500,0,0,Regular,466,431
+2025-09-20,Saturday,Dinner,Parotta,328,0,0,Regular,431,223
+2025-09-21,Sunday,Lunch,Special Meals,102,1,0,Regular,223,38
+2025-09-22,Monday,Dinner,Chapati,586,0,0,Regular,38,373
+2025-09-23,Tuesday,Lunch,South Indian Meals,528,0,0,Regular,373,408
+2025-09-24,Wednesday,Breakfast,Poori,435,0,0,Regular,408,337
+2025-09-25,Thursday,Breakfast,Idli,474,0,1,Regular,337,369
+2025-09-26,Friday,Lunch,Chapati,515,0,0,Regular,369,484
+2025-09-27,Saturday,Lunch,South Indian Meals,373,0,0,Regular,484,326
+2025-09-28,Sunday,Dinner,Parotta,68,1,0,Regular,326,0
+2025-09-29,Monday,Breakfast,Dosa,560,0,0,Regular,0,321
+2025-09-30,Tuesday,Dinner,Dosa,436,0,0,Regular,321,338
+2025-10-01,Wednesday,Dinner,Parotta,561,0,0,Regular,338,424
+2025-10-02,Thursday,Breakfast,Upma,586,0,0,Regular,424,364
+2025-10-03,Friday,Breakfast,Dosa,465,0,0,Regular,364,368
+2025-10-04,Saturday,Lunch,Special Meals,274,0,0,Regular,368,251
+2025-10-05,Sunday,Lunch,Variety Rice,96,1,0,Regular,251,30
+2025-10-06,Monday,Dinner,Variety Rice,560,0,0,Regular,30,366
+2025-10-07,Tuesday,Lunch,Biryani,536,0,0,Regular,366,510
+2025-10-08,Wednesday,Breakfast,Dosa,580,0,1,Regular,510,515
+2025-10-09,Thursday,Lunch,Biryani,600,0,0,Regular,515,521
+2025-10-10,Friday,Lunch,Chapati,481,0,0,Regular,521,481
+2025-10-11,Saturday,Lunch,Special Meals,295,0,0,Regular,481,289
+2025-10-12,Sunday,Breakfast,Dosa,121,1,0,Regular,289,0
+2025-10-13,Monday,Dinner,Dosa,424,0,0,Regular,0,282
+2025-10-14,Tuesday,Breakfast,Dosa,552,0,0,Regular,282,382
+2025-10-15,Wednesday,Dinner,Variety Rice,446,0,0,Regular,382,354
+2025-10-16,Thursday,Lunch,South Indian Meals,558,0,0,Regular,354,463
+2025-10-17,Friday,Breakfast,Dosa,535,0,0,Regular,463,430
+2025-10-18,Saturday,Lunch,Chapati,315,0,0,Regular,430,220
+2025-10-19,Sunday,Breakfast,Pongal,85,1,0,Regular,220,0
+2025-10-20,Monday,Lunch,Special Meals,558,0,0,Regular,0,426
+2025-10-21,Tuesday,Lunch,Variety Rice,271,1,0,Regular,426,232
+2025-10-22,Wednesday,Dinner,Chapati,590,0,0,Regular,232,343
+2025-10-23,Thursday,Breakfast,Idli,518,0,0,Regular,343,332
+2025-10-24,Friday,Lunch,Chapati,464,0,0,Regular,332,453
+2025-10-25,Saturday,Lunch,South Indian Meals,395,0,0,Regular,453,298
+2025-10-26,Sunday,Dinner,Variety Rice,86,1,0,Regular,298,0
+2025-10-27,Monday,Breakfast,Dosa,415,0,0,Regular,0,244
+2025-10-28,Tuesday,Dinner,Dosa,492,0,0,Regular,244,358
+2025-10-29,Wednesday,Dinner,Chapati,545,0,0,Regular,358,411
+2025-10-30,Thursday,Lunch,Special Meals,438,0,0,Regular,411,433
+2025-10-31,Friday,Lunch,Special Meals,557,0,0,Regular,433,555
+2025-11-01,Saturday,Breakfast,Poori,313,0,0,Exam Period,555,183
+2025-11-02,Sunday,Breakfast,Pongal,180,1,0,Exam Period,183,0
+2025-11-03,Monday,Dinner,Parotta,345,0,0,Exam Period,0,170
+2025-11-04,Tuesday,Lunch,Chapati,419,0,0,Exam Period,170,313
+2025-11-05,Wednesday,Dinner,Idli,385,0,0,Exam Period,313,274
+2025-11-06,Thursday,Dinner,Parotta,307,0,0,Exam Period,274,240
+2025-11-07,Friday,Lunch,Variety Rice,392,0,1,Exam Period,240,392
+2025-11-08,Saturday,Breakfast,Pongal,320,0,0,Exam Period,392,150
+2025-11-09,Sunday,Breakfast,Upma,242,1,0,Exam Period,150,11
+2025-11-10,Monday,Breakfast,Dosa,430,0,0,Exam Period,11,199
+2025-11-11,Tuesday,Lunch,Biryani,438,0,0,Exam Period,199,336
+2025-11-12,Wednesday,Breakfast,Poori,387,0,0,Exam Period,336,241
+2025-11-13,Thursday,Lunch,Special Meals,276,0,0,Exam Period,241,276
+2025-11-14,Friday,Dinner,Chapati,261,0,0,Exam Period,276,201
+2025-11-15,Saturday,Lunch,Variety Rice,341,0,0,Exam Period,201,220
+2025-11-16,Sunday,Lunch,Special Meals,164,1,1,Exam Period,220,118
+2025-11-17,Monday,Breakfast,Poori,290,0,0,Exam Period,118,159
+2025-11-18,Tuesday,Breakfast,Idli,435,0,0,Exam Period,159,226
+2025-11-19,Wednesday,Lunch,Variety Rice,402,0,1,Exam Period,226,300
+2025-11-20,Thursday,Lunch,Biryani,383,0,0,Exam Period,300,331
+2025-11-21,Friday,Breakfast,Idli,402,0,0,Exam Period,331,246
+2025-11-22,Saturday,Breakfast,Dosa,282,0,0,Exam Period,246,123
+2025-11-23,Sunday,Lunch,Special Meals,294,1,0,Exam Period,123,124
+2025-11-24,Monday,Breakfast,Upma,258,0,0,Exam Period,124,109
+2025-11-25,Tuesday,Dinner,Dosa,335,0,1,Exam Period,109,265
+2025-11-26,Wednesday,Dinner,Dosa,337,0,0,Exam Period,265,216
+2025-11-27,Thursday,Breakfast,Dosa,258,0,0,Exam Period,216,185
+2025-11-28,Friday,Lunch,South Indian Meals,388,0,0,Exam Period,185,313
+2025-11-29,Saturday,Dinner,Parotta,276,0,0,Exam Period,313,161
+2025-11-30,Sunday,Breakfast,Dosa,228,1,0,Exam Period,161,0
+2025-12-01,Monday,Lunch,Special Meals,469,0,0,Regular,0,407
+2025-12-02,Tuesday,Lunch,South Indian Meals,452,0,0,Regular,407,439
+2025-12-03,Wednesday,Dinner,Chapati,486,0,0,Regular,439,358
+2025-12-04,Thursday,Lunch,Biryani,507,0,1,Regular,358,507
+2025-12-05,Friday,Breakfast,Upma,599,0,0,Regular,507,382
+2025-12-06,Saturday,Lunch,Variety Rice,399,0,0,Regular,382,282
+2025-12-07,Sunday,Breakfast,Dosa,96,1,0,Regular,282,0
+2025-12-08,Monday,Breakfast,Upma,447,0,0,Regular,0,251
+2025-12-09,Tuesday,Dinner,Parotta,504,0,1,Regular,251,362
+2025-12-10,Wednesday,Breakfast,Poori,575,0,0,Regular,362,357
+2025-12-11,Thursday,Dinner,Variety Rice,568,0,0,Regular,357,441
+2025-12-12,Friday,Lunch,Variety Rice,553,0,0,Regular,441,513
+2025-12-13,Saturday,Dinner,Parotta,392,0,0,Regular,513,271
+2025-12-14,Sunday,Lunch,South Indian Meals,99,1,1,Regular,271,73
+2025-12-15,Monday,Breakfast,Upma,439,0,0,Regular,73,258
+2025-12-16,Tuesday,Breakfast,Upma,563,0,0,Regular,258,273
+2025-12-17,Wednesday,Dinner,Dosa,552,0,0,Regular,273,360
+2025-12-18,Thursday,Breakfast,Pongal,576,0,0,Regular,360,361
+2025-12-19,Friday,Breakfast,Idli,441,0,1,Regular,361,300
+2025-12-20,Saturday,Lunch,Chapati,352,0,0,Regular,300,226
+2025-12-21,Sunday,Breakfast,Dosa,43,1,0,Regular,226,0
+2025-12-22,Monday,Breakfast,Dosa,573,0,0,Regular,0,337
+2025-12-23,Tuesday,Lunch,Biryani,466,0,0,Regular,337,466
+2025-12-24,Wednesday,Breakfast,Upma,427,0,0,Regular,466,262
+2025-12-25,Thursday,Breakfast,Dosa,552,0,0,Regular,262,345
+2025-12-26,Friday,Breakfast,Idli,551,0,0,Regular,345,405
+2025-12-27,Saturday,Lunch,Biryani,253,0,0,Regular,405,253
+2025-12-28,Sunday,Lunch,Chapati,83,1,0,Regular,253,7
+2025-12-29,Monday,Dinner,Parotta,495,0,0,Regular,7,328
+2025-12-30,Tuesday,Dinner,Idli,597,0,0,Regular,328,458
+2025-12-31,Wednesday,Breakfast,Dosa,561,0,0,Regular,458,380
+2026-01-01,Thursday,Lunch,South Indian Meals,521,0,0,Regular,380,399
+2026-01-02,Friday,Dinner,Parotta,529,0,1,Regular,399,488
+2026-01-03,Saturday,Breakfast,Pongal,332,0,0,Regular,488,159
+2026-01-04,Sunday,Breakfast,Dosa,104,1,0,Regular,159,0
+2026-01-05,Monday,Dinner,Dosa,446,0,0,Regular,0,292
+2026-01-06,Tuesday,Dinner,Chapati,555,0,0,Regular,292,422
+2026-01-07,Wednesday,Lunch,Biryani,463,0,0,Regular,422,463
+2026-01-08,Thursday,Dinner,Dosa,560,0,0,Regular,463,451
+2026-01-09,Friday,Lunch,Chapati,470,0,0,Regular,451,398
+2026-01-10,Saturday,Dinner,Parotta,295,0,0,Regular,398,177
+2026-01-11,Sunday,Lunch,Variety Rice,80,1,0,Regular,177,0
+2026-01-12,Monday,Dinner,Idli,532,0,0,Regular,0,304
+2026-01-13,Tuesday,Dinner,Chapati,522,0,0,Regular,304,401
+2026-01-14,Wednesday,Dinner,Variety Rice,277,1,0,Regular,401,183
+2026-01-15,Thursday,Lunch,Variety Rice,559,0,0,Regular,183,486
+2026-01-16,Friday,Breakfast,Idli,540,0,0,Regular,486,368
+2026-01-17,Saturday,Lunch,Variety Rice,293,0,0,Regular,368,243
+2026-01-18,Sunday,Breakfast,Poori,101,1,0,Regular,243,0
+2026-01-19,Monday,Lunch,South Indian Meals,522,0,0,Regular,0,409
+2026-01-20,Tuesday,Lunch,Chapati,542,0,0,Regular,409,436
+2026-01-21,Wednesday,Lunch,Variety Rice,566,0,1,Regular,436,504
+2026-01-22,Thursday,Dinner,Variety Rice,506,0,0,Regular,504,452
+2026-01-23,Friday,Dinner,Parotta,469,0,0,Regular,452,391
+2026-01-24,Saturday,Dinner,Parotta,344,0,0,Regular,391,196
+2026-01-25,Sunday,Dinner,Variety Rice,99,1,1,Regular,196,0
+2026-01-26,Monday,Lunch,Special Meals,489,0,0,Regular,0,438
+2026-01-27,Tuesday,Dinner,Parotta,539,0,0,Regular,438,441
+2026-01-28,Wednesday,Lunch,Variety Rice,442,0,0,Regular,441,359
+2026-01-29,Thursday,Breakfast,Upma,527,0,0,Regular,359,323
+2026-01-30,Friday,Lunch,Special Meals,592,0,0,Regular,323,553
+2026-01-31,Saturday,Dinner,Variety Rice,292,0,1,Regular,553,207
+2026-02-01,Sunday,Lunch,Special Meals,68,1,0,Regular,207,33
+2026-02-02,Monday,Lunch,Special Meals,557,0,0,Regular,33,460
+2026-02-03,Tuesday,Breakfast,Upma,532,0,0,Regular,460,334
+2026-02-04,Wednesday,Lunch,Chapati,558,0,0,Regular,334,425
+2026-02-05,Thursday,Breakfast,Pongal,452,0,0,Regular,425,257
+2026-02-06,Friday,Breakfast,Upma,456,0,0,Regular,257,274
+2026-02-07,Saturday,Breakfast,Upma,324,0,0,Regular,274,116
+2026-02-08,Sunday,Breakfast,Upma,73,1,0,Regular,116,0
+2026-02-09,Monday,Breakfast,Pongal,515,0,0,Regular,0,256
+2026-02-10,Tuesday,Dinner,Idli,490,0,0,Regular,256,321
+2026-02-11,Wednesday,Dinner,Variety Rice,549,0,0,Regular,321,366
+2026-02-12,Thursday,Dinner,Dosa,401,0,0,Regular,366,338
+2026-02-13,Friday,Lunch,Variety Rice,557,0,0,Regular,338,443
+2026-02-14,Saturday,Breakfast,Upma,375,0,0,Regular,443,207
+2026-02-15,Sunday,Dinner,Chapati,87,1,1,Regular,207,0
+2026-02-16,Monday,Lunch,Biryani,501,0,0,Regular,0,379
+2026-02-17,Tuesday,Breakfast,Dosa,479,0,0,Regular,379,351
+2026-02-18,Wednesday,Dinner,Parotta,524,0,0,Regular,351,407
+2026-02-19,Thursday,Breakfast,Upma,426,0,0,Regular,407,231
+2026-02-20,Friday,Lunch,South Indian Meals,269,1,0,Regular,231,234
+2026-02-21,Saturday,Dinner,Variety Rice,287,0,0,Regular,234,148
+2026-02-22,Sunday,Dinner,Parotta,65,1,1,Regular,148,1
+2026-02-23,Monday,Dinner,Parotta,575,0,0,Regular,1,415
+2026-02-24,Tuesday,Dinner,Parotta,554,0,0,Regular,415,426
+2026-02-25,Wednesday,Lunch,Biryani,466,0,0,Regular,426,466
+2026-02-26,Thursday,Lunch,Special Meals,409,0,0,Regular,466,409
+2026-02-27,Friday,Breakfast,Upma,490,0,0,Regular,409,293
+2026-02-28,Saturday,Lunch,Special Meals,383,0,0,Regular,293,338
+2026-03-01,Sunday,Breakfast,Idli,98,1,0,Regular,338,0
+2026-03-02,Monday,Lunch,Chapati,425,0,0,Regular,0,373
+2026-03-03,Tuesday,Lunch,Special Meals,476,0,0,Regular,373,438
+2026-03-04,Wednesday,Dinner,Variety Rice,540,0,0,Regular,438,406
+2026-03-05,Thursday,Breakfast,Idli,412,0,0,Regular,406,314
+2026-03-06,Friday,Lunch,Biryani,422,0,0,Regular,314,412
+2026-03-07,Saturday,Dinner,Idli,394,0,0,Regular,412,240
+2026-03-08,Sunday,Lunch,Variety Rice,63,1,0,Regular,240,2
+2026-03-09,Monday,Dinner,Chapati,516,0,0,Regular,2,370
+2026-03-10,Tuesday,Dinner,Variety Rice,447,0,0,Regular,370,360
+2026-03-11,Wednesday,Lunch,Chapati,580,0,0,Regular,360,486
+2026-03-12,Thursday,Breakfast,Dosa,440,0,0,Regular,486,340
+2026-03-13,Friday,Dinner,Idli,580,0,0,Regular,340,439
+2026-03-14,Saturday,Dinner,Dosa,284,0,0,Regular,439,217
+2026-03-15,Sunday,Dinner,Chapati,105,1,0,Regular,217,0
+2026-03-16,Monday,Lunch,Variety Rice,504,0,0,Regular,0,419
+2026-03-17,Tuesday,Dinner,Parotta,416,0,0,Regular,419,314
+2026-03-18,Wednesday,Dinner,Variety Rice,406,0,0,Regular,314,285
+2026-03-19,Thursday,Breakfast,Pongal,451,0,0,Regular,285,279
+2026-03-20,Friday,Dinner,Dosa,577,0,0,Regular,279,469
+2026-03-21,Saturday,Dinner,Parotta,399,0,1,Regular,469,269
+2026-03-22,Sunday,Dinner,Dosa,101,1,0,Regular,269,8
+2026-03-23,Monday,Breakfast,Upma,510,0,0,Regular,8,314
+2026-03-24,Tuesday,Breakfast,Poori,510,0,0,Regular,314,390
+2026-03-25,Wednesday,Dinner,Dosa,534,0,0,Regular,390,430
+2026-03-26,Thursday,Lunch,Special Meals,563,0,0,Regular,430,556
+2026-03-27,Friday,Lunch,South Indian Meals,405,1,0,Regular,556,358
+2026-03-28,Saturday,Lunch,South Indian Meals,337,0,0,Regular,358,245
+2026-03-29,Sunday,Breakfast,Pongal,111,1,0,Regular,245,0
+2026-03-30,Monday,Lunch,South Indian Meals,503,0,0,Regular,0,356
+2026-03-31,Tuesday,Breakfast,Upma,496,0,0,Regular,356,321
+2026-04-01,Wednesday,Breakfast,Poori,428,0,1,Exam Period,321,272
+2026-04-02,Thursday,Dinner,Dosa,255,0,0,Exam Period,272,225
+2026-04-03,Friday,Breakfast,Idli,272,0,0,Exam Period,225,168
+2026-04-04,Saturday,Breakfast,Poori,365,0,0,Exam Period,168,160
+2026-04-05,Sunday,Dinner,Parotta,171,1,0,Exam Period,160,17
+2026-04-06,Monday,Lunch,South Indian Meals,297,0,0,Exam Period,17,229
+2026-04-07,Tuesday,Breakfast,Pongal,337,0,0,Exam Period,229,164
+2026-04-08,Wednesday,Breakfast,Pongal,288,0,0,Exam Period,164,107
+2026-04-09,Thursday,Lunch,Special Meals,257,0,0,Exam Period,107,257
+2026-04-10,Friday,Breakfast,Pongal,343,0,0,Exam Period,257,179
+2026-04-11,Saturday,Breakfast,Pongal,357,0,0,Exam Period,179,107
+2026-04-12,Sunday,Dinner,Parotta,202,1,0,Exam Period,107,36
+2026-04-13,Monday,Lunch,South Indian Meals,258,0,0,Exam Period,36,227
+2026-04-14,Tuesday,Dinner,Parotta,359,0,0,Exam Period,227,243
+2026-04-15,Wednesday,Breakfast,Poori,367,0,0,Exam Period,243,174
+2026-04-16,Thursday,Lunch,Variety Rice,274,0,0,Exam Period,174,236
+2026-04-17,Friday,Lunch,Chapati,270,0,0,Exam Period,236,248
+2026-04-18,Saturday,Breakfast,Idli,404,0,0,Exam Period,248,187
+2026-04-19,Sunday,Dinner,Variety Rice,285,1,0,Exam Period,187,47
+2026-04-20,Monday,Lunch,Biryani,326,0,0,Exam Period,47,289
+2026-04-21,Tuesday,Breakfast,Pongal,319,0,0,Exam Period,289,173
+2026-04-22,Wednesday,Dinner,Variety Rice,315,0,0,Exam Period,173,181
+2026-04-23,Thursday,Lunch,Chapati,404,0,0,Exam Period,181,268
+2026-04-24,Friday,Dinner,Variety Rice,434,0,1,Exam Period,268,281
+2026-04-25,Saturday,Lunch,South Indian Meals,347,0,0,Exam Period,281,238
+2026-04-26,Sunday,Breakfast,Pongal,323,1,0,Exam Period,238,25
+2026-04-27,Monday,Breakfast,Poori,364,0,0,Exam Period,25,204
+2026-04-28,Tuesday,Lunch,South Indian Meals,349,0,0,Exam Period,204,300
+2026-04-29,Wednesday,Dinner,Variety Rice,322,0,0,Exam Period,300,212
+2026-04-30,Thursday,Lunch,Chapati,315,0,1,Exam Period,212,273
+2026-05-01,Friday,Dinner,Idli,152,0,0,Semester Holiday,273,125
+2026-05-02,Saturday,Dinner,Parotta,109,0,0,Semester Holiday,125,30
+2026-05-03,Sunday,Dinner,Idli,65,1,0,Semester Holiday,30,0
+2026-05-04,Monday,Dinner,Chapati,125,0,1,Semester Holiday,0,69
+2026-05-05,Tuesday,Lunch,South Indian Meals,150,0,0,Semester Holiday,69,147
+2026-05-06,Wednesday,Dinner,Parotta,86,0,0,Semester Holiday,147,59
+2026-05-07,Thursday,Dinner,Variety Rice,182,0,0,Semester Holiday,59,99
+2026-05-08,Friday,Lunch,Special Meals,144,0,0,Semester Holiday,99,144
+2026-05-09,Saturday,Dinner,Chapati,191,0,0,Semester Holiday,144,60
+2026-05-10,Sunday,Lunch,South Indian Meals,84,1,0,Semester Holiday,60,4
+2026-05-11,Monday,Lunch,Biryani,200,0,0,Semester Holiday,4,200
+2026-05-12,Tuesday,Breakfast,Poori,95,0,1,Semester Holiday,200,84
+2026-05-13,Wednesday,Lunch,Special Meals,162,0,0,Semester Holiday,84,132
+2026-05-14,Thursday,Dinner,Chapati,173,0,0,Semester Holiday,132,97
+2026-05-15,Friday,Breakfast,Pongal,130,0,1,Semester Holiday,97,76
+2026-05-16,Saturday,Dinner,Variety Rice,91,0,0,Semester Holiday,76,0
+2026-05-17,Sunday,Breakfast,Pongal,80,1,0,Semester Holiday,0,0
+2026-05-18,Monday,Breakfast,Pongal,175,0,0,Semester Holiday,0,59
+2026-05-19,Tuesday,Lunch,Variety Rice,189,0,0,Semester Holiday,59,135
+2026-05-20,Wednesday,Lunch,South Indian Meals,130,0,0,Semester Holiday,135,121
+2026-05-21,Thursday,Dinner,Chapati,128,0,0,Semester Holiday,121,88
+2026-05-22,Friday,Breakfast,Upma,140,1,0,Semester Holiday,88,57
+2026-05-23,Saturday,Lunch,Special Meals,89,0,0,Semester Holiday,57,66
+2026-05-24,Sunday,Lunch,Special Meals,60,1,0,Semester Holiday,66,9
+2026-05-25,Monday,Breakfast,Pongal,119,0,1,Semester Holiday,9,35
+2026-05-26,Tuesday,Breakfast,Idli,109,0,0,Semester Holiday,35,24
+2026-05-27,Wednesday,Dinner,Idli,199,0,0,Semester Holiday,24,74
+2026-05-28,Thursday,Breakfast,Poori,156,0,0,Semester Holiday,74,60
+2026-05-29,Friday,Dinner,Dosa,93,0,0,Semester Holiday,60,87
+2026-05-30,Saturday,Dinner,Parotta,110,0,0,Semester Holiday,87,46
+2026-05-31,Sunday,Lunch,Biryani,138,1,0,Semester Holiday,46,46
+2026-06-01,Monday,Dinner,Idli,111,0,0,Semester Holiday,46,63
+2026-06-02,Tuesday,Lunch,Special Meals,97,0,0,Semester Holiday,63,97
+2026-06-03,Wednesday,Breakfast,Pongal,92,0,0,Semester Holiday,97,19
+2026-06-04,Thursday,Lunch,Chapati,186,0,1,Semester Holiday,19,186
+2026-06-05,Friday,Breakfast,Pongal,121,0,0,Semester Holiday,186,43
+2026-06-06,Saturday,Dinner,Dosa,137,0,0,Semester Holiday,43,17
+2026-06-07,Sunday,Breakfast,Upma,103,1,0,Semester Holiday,17,0
+2026-06-08,Monday,Lunch,Biryani,133,0,0,Semester Holiday,0,133
+2026-06-09,Tuesday,Dinner,Chapati,104,0,0,Semester Holiday,133,68
+2026-06-10,Wednesday,Dinner,Dosa,96,0,0,Semester Holiday,68,64
+2026-06-11,Thursday,Breakfast,Poori,110,0,0,Semester Holiday,64,35
+2026-06-12,Friday,Lunch,South Indian Meals,174,0,1,Semester Holiday,35,174
+2026-06-13,Saturday,Breakfast,Upma,158,0,0,Semester Holiday,174,10
+2026-06-14,Sunday,Breakfast,Pongal,79,1,0,Semester Holiday,10,0
+2026-06-15,Monday,Dinner,Dosa,89,0,0,Semester Holiday,0,38
+2026-06-16,Tuesday,Breakfast,Dosa,112,0,0,Semester Holiday,38,61
+2026-06-17,Wednesday,Dinner,Idli,168,0,0,Semester Holiday,61,65
+2026-06-18,Thursday,Breakfast,Upma,176,0,0,Semester Holiday,65,54
+2026-06-19,Friday,Lunch,South Indian Meals,191,0,0,Semester Holiday,54,176
+2026-06-20,Saturday,Lunch,Biryani,96,0,0,Semester Holiday,176,96
+2026-06-21,Sunday,Lunch,South Indian Meals,62,1,0,Semester Holiday,96,2
+2026-06-22,Monday,Dinner,Idli,101,0,0,Semester Holiday,2,39
+2026-06-23,Tuesday,Lunch,Special Meals,166,0,0,Semester Holiday,39,151
+2026-06-24,Wednesday,Breakfast,Upma,189,0,0,Semester Holiday,151,61
+2026-06-25,Thursday,Breakfast,Pongal,182,0,0,Semester Holiday,61,63
+2026-06-26,Friday,Dinner,Parotta,157,0,1,Semester Holiday,63,155
+2026-06-27,Saturday,Dinner,Chapati,150,0,0,Semester Holiday,155,39
+2026-06-28,Sunday,Lunch,Chapati,125,1,0,Semester Holiday,39,8
+2026-06-29,Monday,Lunch,Chapati,104,0,0,Semester Holiday,8,104
+2026-06-30,Tuesday,Lunch,South Indian Meals,114,0,0,Semester Holiday,104,114
+2026-07-01,Wednesday,Lunch,Special Meals,529,0,0,Regular,114,407
+2026-07-02,Thursday,Breakfast,Poori,574,0,0,Regular,407,403
+2026-07-03,Friday,Breakfast,Idli,571,0,0,Regular,403,423
+2026-07-04,Saturday,Lunch,Chapati,292,0,0,Regular,423,240
+2026-07-05,Sunday,Dinner,Variety Rice,123,1,0,Regular,240,0
+2026-07-06,Monday,Lunch,Chapati,434,0,0,Regular,0,313
+2026-07-07,Tuesday,Dinner,Chapati,498,0,0,Regular,313,392
+2026-07-08,Wednesday,Dinner,Dosa,584,0,0,Regular,392,377
+2026-07-09,Thursday,Lunch,Special Meals,541,0,0,Regular,377,455
+2026-07-10,Friday,Lunch,Special Meals,467,0,1,Regular,455,467
+2026-07-11,Saturday,Breakfast,Upma,385,0,0,Regular,467,214
+2026-07-12,Sunday,Breakfast,Dosa,100,1,0,Regular,214,0
+2026-07-13,Monday,Dinner,Variety Rice,528,0,0,Regular,0,372
+2026-07-14,Tuesday,Dinner,Chapati,463,0,0,Regular,372,381
+2026-07-15,Wednesday,Dinner,Chapati,402,0,0,Regular,381,325
+2026-07-16,Thursday,Breakfast,Poori,577,0,0,Regular,325,378
+2026-07-17,Friday,Dinner,Dosa,348,1,0,Regular,378,257
+2026-07-18,Saturday,Breakfast,Poori,313,0,0,Regular,257,138
+2026-07-19,Sunday,Dinner,Parotta,103,1,0,Regular,138,0
+2026-07-20,Monday,Breakfast,Poori,438,0,0,Regular,0,223
+2026-07-21,Tuesday,Breakfast,Pongal,411,0,0,Regular,223,271
+2026-07-22,Wednesday,Dinner,Variety Rice,432,0,0,Regular,271,348
+2026-07-23,Thursday,Lunch,South Indian Meals,412,0,0,Regular,348,342
+2026-07-24,Friday,Lunch,Biryani,592,0,0,Regular,342,574
+2026-07-25,Saturday,Lunch,Special Meals,393,0,0,Regular,574,321
+2026-07-26,Sunday,Lunch,South Indian Meals,115,1,0,Regular,321,58
+2026-07-27,Monday,Breakfast,Idli,575,0,0,Regular,58,309
+2026-07-28,Tuesday,Lunch,South Indian Meals,501,0,0,Regular,309,446
+2026-07-29,Wednesday,Lunch,Variety Rice,466,0,0,Regular,446,391
+2026-07-30,Thursday,Breakfast,Poori,530,0,0,Regular,391,378
+2026-07-31,Friday,Lunch,South Indian Meals,463,0,0,Regular,378,434
+2026-08-01,Saturday,Breakfast,Dosa,254,0,0,Regular,434,140
+2026-08-02,Sunday,Lunch,Biryani,76,1,0,Regular,140,18
+2026-08-03,Monday,Breakfast,Pongal,442,0,1,Regular,18,261
+2026-08-04,Tuesday,Dinner,Variety Rice,445,0,1,Regular,261,375
+2026-08-05,Wednesday,Dinner,Chapati,564,0,0,Regular,375,441
+2026-08-06,Thursday,Dinner,Parotta,456,0,0,Regular,441,399
+2026-08-07,Friday,Dinner,Parotta,579,0,0,Regular,399,489
+2026-08-08,Saturday,Breakfast,Idli,343,0,0,Regular,489,175
+2026-08-09,Sunday,Lunch,South Indian Meals,110,1,0,Regular,175,16
+2026-08-10,Monday,Dinner,Chapati,588,0,1,Regular,16,448
+2026-08-11,Tuesday,Dinner,Parotta,464,0,0,Regular,448,366
+2026-08-12,Wednesday,Breakfast,Dosa,472,0,0,Regular,366,270
+2026-08-13,Thursday,Breakfast,Dosa,575,0,0,Regular,270,350
+2026-08-14,Friday,Dinner,Variety Rice,571,0,0,Regular,350,396
+2026-08-15,Saturday,Lunch,Chapati,330,0,0,Regular,396,217
+2026-08-16,Sunday,Lunch,Variety Rice,46,1,0,Regular,217,0
+2026-08-17,Monday,Dinner,Idli,597,0,0,Regular,0,355
+2026-08-18,Tuesday,Dinner,Dosa,518,0,0,Regular,355,343
+2026-08-19,Wednesday,Dinner,Idli,555,0,0,Regular,343,423
+2026-08-20,Thursday,Dinner,Chapati,427,0,0,Regular,423,353
+2026-08-21,Friday,Dinner,Dosa,581,0,0,Regular,353,407
+2026-08-22,Saturday,Breakfast,Pongal,368,0,0,Regular,407,176
+2026-08-23,Sunday,Dinner,Parotta,48,1,0,Regular,176,0
+2026-08-24,Monday,Dinner,Variety Rice,510,0,0,Regular,0,307
+2026-08-25,Tuesday,Lunch,Variety Rice,425,0,0,Regular,307,379
+2026-08-26,Wednesday,Lunch,Biryani,456,0,0,Regular,379,414
+2026-08-27,Thursday,Lunch,Biryani,547,0,0,Regular,414,493
+2026-08-28,Friday,Dinner,Variety Rice,443,0,0,Regular,493,357
+2026-08-29,Saturday,Dinner,Idli,311,0,1,Regular,357,179
+2026-08-30,Sunday,Lunch,Special Meals,105,1,0,Regular,179,35
+2026-08-31,Monday,Lunch,Chapati,422,0,0,Regular,35,363
+2026-09-01,Tuesday,Breakfast,Pongal,418,0,0,Regular,363,221
+2026-09-02,Wednesday,Breakfast,Poori,438,0,0,Regular,221,289
+2026-09-03,Thursday,Lunch,South Indian Meals,512,0,0,Regular,289,475
+2026-09-04,Friday,Breakfast,Idli,418,0,0,Regular,475,293
+2026-09-05,Saturday,Breakfast,Idli,318,0,0,Regular,293,135
+2026-09-06,Sunday,Lunch,Variety Rice,67,1,0,Regular,135,5
+2026-09-07,Monday,Lunch,Biryani,470,0,1,Regular,5,470
+2026-09-08,Tuesday,Breakfast,Idli,444,0,0,Regular,470,302
+2026-09-09,Wednesday,Dinner,Chapati,421,0,0,Regular,302,285
+2026-09-10,Thursday,Dinner,Parotta,261,1,0,Regular,285,190
+2026-09-11,Friday,Lunch,South Indian Meals,429,0,0,Regular,190,359
+2026-09-12,Saturday,Lunch,South Indian Meals,263,0,0,Regular,359,223
+2026-09-13,Sunday,Lunch,Variety Rice,65,1,0,Regular,223,0
+2026-09-14,Monday,Lunch,South Indian Meals,446,0,0,Regular,0,300
+2026-09-15,Tuesday,Breakfast,Dosa,563,0,0,Regular,300,371
+2026-09-16,Wednesday,Breakfast,Upma,427,0,0,Regular,371,288
+2026-09-17,Thursday,Lunch,South Indian Meals,494,0,0,Regular,288,443
+2026-09-18,Friday,Breakfast,Poori,448,0,0,Regular,443,306
+2026-09-19,Saturday,Breakfast,Poori,349,0,0,Regular,306,149
+2026-09-20,Sunday,Lunch,Variety Rice,91,1,0,Regular,149,0
+2026-09-21,Monday,Lunch,Special Meals,493,0,0,Regular,0,402
+2026-09-22,Tuesday,Dinner,Idli,561,0,0,Regular,402,426
+2026-09-23,Wednesday,Lunch,Biryani,513,0,0,Regular,426,512
+2026-09-24,Thursday,Lunch,Variety Rice,461,0,0,Regular,512,422
+2026-09-25,Friday,Breakfast,Dosa,420,0,0,Regular,422,279
+2026-09-26,Saturday,Lunch,Biryani,378,0,0,Regular,279,337
