@@ -1,0 +1,760 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Waste Analysis | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================== -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            ♻️ Smart Waste Management
+
+        </div>
+
+
+        <h1>
+
+            Food Waste Analysis
+
+        </h1>
+
+
+        <p>
+
+            Analyze food wastage and receive smart
+            recommendations to improve food management
+            in your college mess.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         WASTE ANALYSIS FORM
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    📝 Enter Food Details
+
+                </h2>
+
+
+                <p>
+
+                    Enter the number of servings prepared
+                    and students served.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <form id="wasteForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- FOOD PREPARED -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        🍽️ Food Prepared (Servings)
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="foodPrepared"
+                        name="food_prepared"
+                        placeholder="Example: 500"
+                        min="1"
+                        required
+                    >
+
+
+                </div>
+
+
+
+                <!-- STUDENTS SERVED -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        👨‍🎓 Students Served
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="studentsServed"
+                        name="students_served"
+                        placeholder="Example: 450"
+                        min="0"
+                        required
+                    >
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SUBMIT BUTTON -->
+
+            <div class="page-actions">
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+
+                    ♻️ Analyze Food Waste
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         RESULT SECTION
+    ========================================== -->
+
+    <section
+        id="wasteResult"
+        class="card"
+        style="display: none;"
+    >
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    📊 Waste Analysis Result
+
+                </h2>
+
+
+                <p>
+
+                    Analysis based on the food data provided.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RESULT CARDS -->
+
+        <section class="stats-grid">
+
+
+            <!-- FOOD PREPARED -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    🍽️
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        Food Prepared
+
+                    </span>
+
+
+                    <strong
+                        id="resultFoodPrepared"
+                    >
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- STUDENTS SERVED -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    👨‍🎓
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        Students Served
+
+                    </span>
+
+
+                    <strong
+                        id="resultStudentsServed"
+                    >
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FOOD WASTED -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    🗑️
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        Food Wasted
+
+                    </span>
+
+
+                    <strong
+                        id="resultFoodWasted"
+                    >
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WASTAGE PERCENTAGE -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    📉
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        Wastage Percentage
+
+                    </span>
+
+
+                    <strong
+                        id="resultWastagePercentage"
+                    >
+
+                        0%
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- AI RECOMMENDATION -->
+
+        <section class="card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+
+                    <h2>
+
+                        🤖 AI Recommendation
+
+                    </h2>
+
+
+                    <p
+                        id="recommendationText"
+                    >
+
+                        Your recommendation will appear here.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         HOW IT WORKS
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    💡 How Waste Analysis Works
+
+                </h2>
+
+
+                <p>
+
+                    FoodWise AI calculates food wastage
+                    using the following information.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <section class="recommendation-grid">
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    🍽️ Food Prepared
+
+                </h3>
+
+
+                <p>
+
+                    The total number of food servings
+                    prepared for a meal.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    👨‍🎓 Students Served
+
+                </h3>
+
+
+                <p>
+
+                    The number of students who were
+                    served food.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    ♻️ Food Waste
+
+                </h3>
+
+
+                <p>
+
+                    Food waste is calculated by comparing
+                    prepared food with food consumed.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+
+
+/* =========================================
+   GET FORM
+========================================= */
+
+const wasteForm =
+
+    document.getElementById(
+
+        "wasteForm"
+
+    );
+
+
+/* =========================================
+   FORM SUBMISSION
+========================================= */
+
+wasteForm.addEventListener(
+
+    "submit",
+
+    async function(event) {
+
+
+        event.preventDefault();
+
+
+        /* GET INPUT VALUES */
+
+        const foodPrepared =
+
+            document.getElementById(
+
+                "foodPrepared"
+
+            ).value;
+
+
+        const studentsServed =
+
+            document.getElementById(
+
+                "studentsServed"
+
+            ).value;
+
+
+        try {
+
+
+            /* SEND DATA TO FLASK */
+
+            const response =
+
+                await fetch(
+
+                    "/analyze-waste",
+
+                    {
+
+                        method: "POST",
+
+
+                        headers: {
+
+                            "Content-Type":
+
+                                "application/json"
+
+                        },
+
+
+                        body:
+
+                            JSON.stringify({
+
+                                food_prepared:
+
+                                    foodPrepared,
+
+
+                                students_served:
+
+                                    studentsServed
+
+                            })
+
+                    }
+
+                );
+
+
+            const data =
+
+                await response.json();
+
+
+            /* =====================================
+               SUCCESS
+            ====================================== */
+
+            if (data.success) {
+
+
+                document.getElementById(
+
+                    "resultFoodPrepared"
+
+                ).textContent =
+
+                    data.food_prepared;
+
+
+                document.getElementById(
+
+                    "resultStudentsServed"
+
+                ).textContent =
+
+                    data.students_served;
+
+
+                document.getElementById(
+
+                    "resultFoodWasted"
+
+                ).textContent =
+
+                    data.food_wasted;
+
+
+                document.getElementById(
+
+                    "resultWastagePercentage"
+
+                ).textContent =
+
+                    data.wastage_percentage
+
+                    +
+
+                    "%";
+
+
+                document.getElementById(
+
+                    "recommendationText"
+
+                ).textContent =
+
+                    data.recommendation;
+
+
+                /* SHOW RESULT */
+
+                document.getElementById(
+
+                    "wasteResult"
+
+                ).style.display =
+
+                    "block";
+
+
+                /* SCROLL TO RESULT */
+
+                document.getElementById(
+
+                    "wasteResult"
+
+                ).scrollIntoView({
+
+                    behavior:
+
+                        "smooth"
+
+                });
+
+
+            }
+
+
+            /* =====================================
+               ERROR
+            ====================================== */
+
+            else {
+
+
+                alert(
+
+                    "Error: "
+
+                    +
+
+                    data.error
+
+                );
+
+
+            }
+
+
+        }
+
+
+        catch (error) {
+
+
+            console.error(
+
+                error
+
+            );
+
+
+            alert(
+
+                "Something went wrong. Please try again."
+
+            );
+
+
+        }
+
+
+    }
+
+);
+
+
+</script>
+
+{% endblock %}

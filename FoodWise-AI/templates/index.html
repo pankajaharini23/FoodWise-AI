@@ -1,0 +1,870 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Dashboard | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         DASHBOARD HERO
+    ========================================== -->
+
+    <section class="page-header">
+
+        <div class="page-badge">
+            ✨ AI-Powered Smart Mess Management
+        </div>
+
+
+        <h1>
+            Smart Food Demand Prediction
+        </h1>
+
+
+        <p>
+            Make smarter food preparation decisions using Artificial Intelligence.
+            Predict student demand, reduce food wastage, and improve college mess
+            management.
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         DASHBOARD STATISTICS
+    ========================================== -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL PREDICTIONS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📊
+            </div>
+
+
+            <div class="stat-info">
+
+                <span>
+                    Total Predictions
+                </span>
+
+
+                <strong>
+                    {{ total_predictions }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LATEST DEMAND -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🍽️
+            </div>
+
+
+            <div class="stat-info">
+
+                <span>
+                    Latest Predicted Demand
+                </span>
+
+
+                <strong>
+                    {{ latest_predicted_demand }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WASTE RECORDS -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ♻️
+            </div>
+
+
+            <div class="stat-info">
+
+                <span>
+                    Waste Records
+                </span>
+
+
+                <strong>
+                    {{ total_waste_records }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LATEST WASTE -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🗑️
+            </div>
+
+
+            <div class="stat-info">
+
+                <span>
+                    Latest Food Wasted
+                </span>
+
+
+                <strong>
+                    {{ latest_food_wasted }}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PREDICTION FORM CARD
+    ========================================== -->
+
+    <section class="card">
+
+
+        <!-- CARD HEADER -->
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    🤖 Predict Food Demand
+                </h2>
+
+
+                <p>
+                    Enter the meal details below and let FoodWise AI estimate
+                    the expected food demand.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             PREDICTION FORM
+        ====================================== -->
+
+        <form id="predictionForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- DAY -->
+
+                <div class="form-group">
+
+                    <label for="day">
+                        📅 Day of the Week
+                    </label>
+
+
+                    <select
+                        id="day"
+                        name="day"
+                        required
+                    >
+
+                        <option value="">
+                            Select Day
+                        </option>
+
+                        <option value="Monday">
+                            Monday
+                        </option>
+
+                        <option value="Tuesday">
+                            Tuesday
+                        </option>
+
+                        <option value="Wednesday">
+                            Wednesday
+                        </option>
+
+                        <option value="Thursday">
+                            Thursday
+                        </option>
+
+                        <option value="Friday">
+                            Friday
+                        </option>
+
+                        <option value="Saturday">
+                            Saturday
+                        </option>
+
+                        <option value="Sunday">
+                            Sunday
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- MEAL -->
+
+                <div class="form-group">
+
+                    <label for="meal">
+                        🍽️ Meal Type
+                    </label>
+
+
+                    <select
+                        id="meal"
+                        name="meal"
+                        required
+                    >
+
+                        <option value="">
+                            Select Meal
+                        </option>
+
+                        <option value="Breakfast">
+                            Breakfast
+                        </option>
+
+                        <option value="Lunch">
+                            Lunch
+                        </option>
+
+                        <option value="Dinner">
+                            Dinner
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- MENU -->
+
+                <div class="form-group">
+
+                    <label for="menu">
+                        🍛 Menu Item
+                    </label>
+
+
+                    <select
+                        id="menu"
+                        name="menu"
+                        required
+                    >
+
+                        <option value="">
+                            Select Menu
+                        </option>
+
+                        <option value="Idli">
+                            Idli
+                        </option>
+
+                        <option value="Dosa">
+                            Dosa
+                        </option>
+
+                        <option value="Pongal">
+                            Pongal
+                        </option>
+
+                        <option value="Chapati">
+                            Chapati
+                        </option>
+
+                        <option value="Rice">
+                            Rice
+                        </option>
+
+                        <option value="Meals">
+                            Meals
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- EXPECTED STUDENTS -->
+
+                <div class="form-group">
+
+                    <label for="expected_students">
+                        👨‍🎓 Expected Students
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="expected_students"
+                        name="expected_students"
+                        placeholder="Example: 450"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- HOLIDAY -->
+
+                <div class="form-group">
+
+                    <label for="holiday">
+                        📅 Holiday
+                    </label>
+
+
+                    <select
+                        id="holiday"
+                        name="holiday"
+                        required
+                    >
+
+                        <option value="0">
+                            No
+                        </option>
+
+                        <option value="1">
+                            Yes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SPECIAL EVENT -->
+
+                <div class="form-group">
+
+                    <label for="special_event">
+                        🎉 Special Event
+                    </label>
+
+
+                    <select
+                        id="special_event"
+                        name="special_event"
+                        required
+                    >
+
+                        <option value="0">
+                            No
+                        </option>
+
+                        <option value="1">
+                            Yes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SEMESTER STATUS -->
+
+                <div class="form-group">
+
+                    <label for="semester_status">
+                        🎓 Semester Status
+                    </label>
+
+
+                    <select
+                        id="semester_status"
+                        name="semester_status"
+                        required
+                    >
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="Regular">
+                            Regular
+                        </option>
+
+                        <option value="Exam">
+                            Exam Period
+                        </option>
+
+                        <option value="Vacation">
+                            Vacation
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- PREVIOUS DEMAND -->
+
+                <div class="form-group">
+
+                    <label for="previous_demand">
+                        📈 Previous Demand
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="previous_demand"
+                        name="previous_demand"
+                        placeholder="Example: 420"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 SUBMIT BUTTON
+            ====================================== -->
+
+            <div class="page-actions">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="predictButton"
+                >
+
+                    🤖 Predict Food Demand
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PREDICTION RESULT
+    ========================================== -->
+
+    <section
+        id="predictionResult"
+        class="card"
+        style="display: none;"
+    >
+
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    ✨ AI Prediction Result
+                </h2>
+
+
+                <p>
+                    FoodWise AI has analyzed your meal information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <section class="stats-grid">
+
+
+            <!-- PREDICTED DEMAND -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🍽️
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Predicted Demand
+                    </span>
+
+
+                    <strong id="predictedDemand">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SAFETY BUFFER -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🛡️
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Safety Buffer
+                    </span>
+
+
+                    <strong id="safetyBuffer">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUFFER PERCENTAGE -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📊
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Buffer Percentage
+                    </span>
+
+
+                    <strong id="bufferPercentage">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECOMMENDED PREPARATION -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👨‍🍳
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Recommended Preparation
+                    </span>
+
+
+                    <strong id="recommendedPreparation">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+
+
+/* =========================================
+   GET PREDICTION FORM
+========================================= */
+
+const predictionForm = document.getElementById(
+    "predictionForm"
+);
+
+
+const predictButton = document.getElementById(
+    "predictButton"
+);
+
+
+/* =========================================
+   FORM SUBMIT EVENT
+========================================= */
+
+predictionForm.addEventListener(
+
+    "submit",
+
+    async function(event) {
+
+
+        /* Prevent normal form submission */
+
+        event.preventDefault();
+
+
+        /* Create FormData */
+
+        const formData = new FormData(
+            predictionForm
+        );
+
+
+        /* Change Button Text */
+
+        predictButton.innerHTML =
+            "⏳ Predicting...";
+
+
+        predictButton.disabled = true;
+
+
+        try {
+
+
+            /* Send Request to Flask */
+
+            const response = await fetch(
+
+                "/predict",
+
+                {
+
+                    method: "POST",
+
+                    body: formData
+
+                }
+
+            );
+
+
+            /* Convert Response to JSON */
+
+            const data = await response.json();
+
+
+            /* =====================================
+               SUCCESS
+            ====================================== */
+
+            if (data.success) {
+
+
+                document.getElementById(
+
+                    "predictedDemand"
+
+                ).textContent =
+
+                    data.predicted_demand;
+
+
+                document.getElementById(
+
+                    "safetyBuffer"
+
+                ).textContent =
+
+                    data.safety_buffer;
+
+
+                document.getElementById(
+
+                    "bufferPercentage"
+
+                ).textContent =
+
+                    data.buffer_percentage + "%";
+
+
+                document.getElementById(
+
+                    "recommendedPreparation"
+
+                ).textContent =
+
+                    data.recommended_preparation;
+
+
+                /* Show Result */
+
+                document.getElementById(
+
+                    "predictionResult"
+
+                ).style.display =
+
+                    "block";
+
+
+                /* Scroll to Result */
+
+                document.getElementById(
+
+                    "predictionResult"
+
+                ).scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+
+            }
+
+
+            /* =====================================
+               ERROR FROM SERVER
+            ====================================== */
+
+            else {
+
+
+                alert(
+
+                    "Prediction Error: " +
+
+                    data.error
+
+                );
+
+
+            }
+
+
+        }
+
+
+        /* =========================================
+           FETCH ERROR
+        ========================================== */
+
+        catch (error) {
+
+
+            console.error(
+
+                "Prediction Error:",
+
+                error
+
+            );
+
+
+            alert(
+
+                "Something went wrong. Please try again."
+
+            );
+
+
+        }
+
+
+        /* =========================================
+           RESTORE BUTTON
+        ========================================== */
+
+        finally {
+
+
+            predictButton.innerHTML =
+
+                "🤖 Predict Food Demand";
+
+
+            predictButton.disabled = false;
+
+
+        }
+
+
+    }
+
+);
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,469 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Model Performance | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================== -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            📊 Machine Learning Model
+
+        </div>
+
+
+        <h1>
+
+            Model Performance
+
+        </h1>
+
+
+        <p>
+
+            Evaluate the performance of the FoodWise AI
+            food demand prediction model.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PERFORMANCE METRICS
+    ========================================== -->
+
+    <section class="metrics-grid">
+
+
+        <!-- MAE -->
+
+        <div class="metric-card">
+
+
+            <h3>
+
+                📏 Mean Absolute Error
+
+            </h3>
+
+
+            <p>
+
+                {{ mae }}
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- MSE -->
+
+        <div class="metric-card">
+
+
+            <h3>
+
+                📊 Mean Squared Error
+
+            </h3>
+
+
+            <p>
+
+                {{ mse }}
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- RMSE -->
+
+        <div class="metric-card">
+
+
+            <h3>
+
+                📉 Root Mean Squared Error
+
+            </h3>
+
+
+            <p>
+
+                {{ rmse }}
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         R2 SCORE
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    🎯 Model Accuracy Score
+
+                </h2>
+
+
+                <p>
+
+                    R² Score indicates how well the model
+                    explains the food demand patterns.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    🤖
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        R² Score
+
+                    </span>
+
+
+                    <strong>
+
+                        {{ r2_score_value }}
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    🎯
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span>
+
+                        Model Accuracy
+
+                    </span>
+
+
+                    <strong>
+
+                        {{ (r2_score_value * 100) | round(2) }}%
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         METRIC EXPLANATION
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    📚 Understanding the Metrics
+
+                </h2>
+
+
+                <p>
+
+                    These metrics help evaluate how well
+                    the AI model predicts food demand.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <section class="recommendation-grid">
+
+
+            <!-- MAE -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📏 MAE
+
+                </h3>
+
+
+                <p>
+
+                    Mean Absolute Error measures the
+                    average difference between the predicted
+                    food demand and the actual food demand.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- MSE -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📊 MSE
+
+                </h3>
+
+
+                <p>
+
+                    Mean Squared Error calculates the
+                    average squared difference between
+                    predicted and actual values.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- RMSE -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📉 RMSE
+
+                </h3>
+
+
+                <p>
+
+                    Root Mean Squared Error shows the
+                    typical prediction error of the
+                    machine learning model.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         MODEL INFORMATION
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    🤖 FoodWise AI Model
+
+                </h2>
+
+
+                <p>
+
+                    Machine learning powered food demand
+                    prediction for smart college mess
+                    management.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <section class="recommendation-grid">
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📥 Input Data
+
+                </h3>
+
+
+                <p>
+
+                    The model uses factors such as day,
+                    meal type, menu, expected students,
+                    holidays and special events.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    🧠 Prediction
+
+                </h3>
+
+
+                <p>
+
+                    The trained machine learning model
+                    analyzes the input data and predicts
+                    the expected food demand.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    🍽️ Smart Planning
+
+                </h3>
+
+
+                <p>
+
+                    Predictions help mess administrators
+                    prepare the appropriate amount of food
+                    and reduce unnecessary waste.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | FoodWise AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body class="auth-body">
+
+
+    <!-- =========================================
+         AUTHENTICATION CONTAINER
+    ========================================== -->
+
+    <div class="auth-page">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="auth-brand-section">
+
+
+            <div class="auth-brand-content">
+
+
+                <div class="auth-logo">
+
+                    🍽️
+
+                </div>
+
+
+                <h1>
+
+                    FoodWise AI
+
+                </h1>
+
+
+                <p class="auth-tagline">
+
+                    Smart Food Demand Prediction
+                    for College Mess Management.
+
+                </p>
+
+
+                <div class="auth-features">
+
+
+                    <div class="auth-feature">
+
+                        <span>🤖</span>
+
+                        <p>
+
+                            AI-powered food demand prediction
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>♻️</span>
+
+                        <p>
+
+                            Smart food waste analysis
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>📊</span>
+
+                        <p>
+
+                            Intelligent analytics and insights
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="auth-form-section">
+
+
+            <div class="auth-card">
+
+
+                <!-- HEADER -->
+
+                <div class="auth-header">
+
+                    <div class="mobile-auth-logo">
+
+                        🍽️
+
+                    </div>
+
+
+                    <h2>
+
+                        Welcome Back
+
+                    </h2>
+
+
+                    <p>
+
+                        Login to continue to FoodWise AI.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- FLASH MESSAGES -->
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+
+                    {% if messages %}
+
+                        {% for category, message in messages %}
+
+                            <div class="auth-alert {{ category }}">
+
+                                {{ message }}
+
+                            </div>
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endwith %}
+
+
+
+                <!-- LOGIN FORM -->
+
+                <form
+                    method="POST"
+                    action="{{ url_for('login') }}"
+                    class="auth-form"
+                >
+
+
+                    <!-- EMAIL -->
+
+                    <div class="auth-form-group">
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="auth-form-group">
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                    >
+
+                        Login to Dashboard →
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- REGISTER LINK -->
+
+                <div class="auth-footer-text">
+
+                    <p>
+
+                        Don't have an account?
+
+                        <a
+                            href="{{ url_for('register') }}"
+                        >
+
+                            Create Account
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</body>
+
+</html>

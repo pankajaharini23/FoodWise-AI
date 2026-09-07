@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Register | FoodWise AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body class="auth-body">
+
+
+    <!-- =========================================
+         AUTHENTICATION CONTAINER
+    ========================================== -->
+
+    <div class="auth-page">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="auth-brand-section">
+
+
+            <div class="auth-brand-content">
+
+
+                <div class="auth-logo">
+
+                    🍽️
+
+                </div>
+
+
+                <h1>
+
+                    FoodWise AI
+
+                </h1>
+
+
+                <p class="auth-tagline">
+
+                    Join the smart food management platform
+                    built for modern college mess systems.
+
+                </p>
+
+
+                <div class="auth-features">
+
+
+                    <div class="auth-feature">
+
+                        <span>📈</span>
+
+                        <p>
+
+                            Predict food demand accurately
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>♻️</span>
+
+                        <p>
+
+                            Reduce unnecessary food waste
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <span>💡</span>
+
+                        <p>
+
+                            Get intelligent AI recommendations
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="auth-form-section">
+
+
+            <div class="auth-card register-card">
+
+
+                <!-- HEADER -->
+
+                <div class="auth-header">
+
+
+                    <div class="mobile-auth-logo">
+
+                        🍽️
+
+                    </div>
+
+
+                    <h2>
+
+                        Create Account
+
+                    </h2>
+
+
+                    <p>
+
+                        Start using FoodWise AI today.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- FLASH MESSAGES -->
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+
+                    {% if messages %}
+
+                        {% for category, message in messages %}
+
+                            <div class="auth-alert {{ category }}">
+
+                                {{ message }}
+
+                            </div>
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endwith %}
+
+
+
+                <!-- REGISTER FORM -->
+
+                <form
+                    method="POST"
+                    action="{{ url_for('register') }}"
+                    class="auth-form"
+                >
+
+
+                    <!-- NAME -->
+
+                    <div class="auth-form-group">
+
+                        <label for="name">
+
+                            Full Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="auth-form-group">
+
+                        <label for="email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="auth-form-group">
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Minimum 6 characters"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="auth-form-group">
+
+                        <label for="confirm_password">
+
+                            Confirm Password
+
+                        </label>
+
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            placeholder="Re-enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- REGISTER BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                    >
+
+                        Create Account →
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- LOGIN LINK -->
+
+                <div class="auth-footer-text">
+
+                    <p>
+
+                        Already have an account?
+
+                        <a
+                            href="{{ url_for('login') }}"
+                        >
+
+                            Login
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+
+</body>
+
+</html>

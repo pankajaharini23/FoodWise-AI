@@ -1,0 +1,935 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Analytics | FoodWise AI
+{% endblock %}
+
+
+{% block extra_head %}
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================== -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            📊 Data Analytics
+
+        </div>
+
+
+        <h1>
+
+            FoodWise AI Analytics
+
+        </h1>
+
+
+        <p>
+
+            Monitor food demand predictions, student attendance,
+            and food waste trends to make smarter decisions
+            for your college mess.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         KEY PERFORMANCE METRICS
+    ========================================== -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL PREDICTIONS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                📊
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Total Predictions
+
+                </span>
+
+
+                <strong>
+
+                    {{ labels | length }}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST PREDICTED DEMAND -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                🍽️
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Demand
+
+                </span>
+
+
+                <strong>
+
+                    {% if predicted_demands %}
+
+                        {{ predicted_demands[-1] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST EXPECTED STUDENTS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                👨‍🎓
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Students
+
+                </span>
+
+
+                <strong>
+
+                    {% if expected_students %}
+
+                        {{ expected_students[-1] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- WASTE RECORDS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                ♻️
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Waste Records
+
+                </span>
+
+
+                <strong>
+
+                    {{ waste_labels | length }}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         SMART INSIGHTS
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    💡 Smart Insights
+
+                </h2>
+
+
+                <p>
+
+                    Quick understanding of your FoodWise AI data.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <section class="recommendation-grid">
+
+
+            <!-- DEMAND -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📈 Demand Monitoring
+
+                </h3>
+
+
+                <p>
+
+                    Track how predicted food demand changes
+                    across different meals, days, and attendance
+                    levels.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- STUDENTS -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    👥 Student Attendance
+
+                </h3>
+
+
+                <p>
+
+                    Compare expected student attendance with
+                    predicted food demand to improve preparation
+                    planning.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- WASTE -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    ♻️ Waste Reduction
+
+                </h3>
+
+
+                <p>
+
+                    Analyze food wastage trends and identify
+                    opportunities to reduce unnecessary food
+                    preparation.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         ANALYTICS CHARTS
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    📊 Analytics Visualizations
+
+                </h2>
+
+
+                <p>
+
+                    Explore prediction and food waste trends
+                    using interactive charts.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <section class="chart-grid">
+
+
+            <!-- FOOD DEMAND TREND -->
+
+            <div class="chart-card">
+
+
+                <h2>
+
+                    📈 Food Demand Trend
+
+                </h2>
+
+
+                <canvas id="demandChart"></canvas>
+
+
+            </div>
+
+
+
+            <!-- STUDENTS VS DEMAND -->
+
+            <div class="chart-card">
+
+
+                <h2>
+
+                    👨‍🎓 Students vs Food Demand
+
+                </h2>
+
+
+                <canvas id="comparisonChart"></canvas>
+
+
+            </div>
+
+
+
+            <!-- FOOD WASTE TREND -->
+
+            <div class="chart-card">
+
+
+                <h2>
+
+                    ♻️ Food Waste Trend
+
+                </h2>
+
+
+                <canvas id="wasteChart"></canvas>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         AI INSIGHT
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    🤖 FoodWise AI Insight
+
+                </h2>
+
+
+                <p>
+
+                    FoodWise AI analyzes prediction history,
+                    student attendance, and food wastage to help
+                    college mess administrators make better
+                    decisions.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+
+
+/* =========================================
+   DATA FROM FLASK
+========================================= */
+
+
+const labels =
+
+    {{ labels | tojson }};
+
+
+const predictedDemands =
+
+    {{ predicted_demands | tojson }};
+
+
+const expectedStudents =
+
+    {{ expected_students | tojson }};
+
+
+const wasteLabels =
+
+    {{ waste_labels | tojson }};
+
+
+const foodWasted =
+
+    {{ food_wasted | tojson }};
+
+
+const wastagePercentages =
+
+    {{ wastage_percentages | tojson }};
+
+
+
+
+/* =========================================
+   CHART DEFAULT SETTINGS
+========================================= */
+
+
+Chart.defaults.font.family =
+
+    "Arial";
+
+
+Chart.defaults.color =
+
+    "#64748b";
+
+
+
+
+/* =========================================
+   FOOD DEMAND TREND CHART
+========================================= */
+
+
+new Chart(
+
+    document.getElementById(
+
+        "demandChart"
+
+    ),
+
+    {
+
+        type: "line",
+
+
+        data: {
+
+            labels: labels,
+
+
+            datasets: [
+
+                {
+
+                    label:
+
+                        "Predicted Food Demand",
+
+
+                    data:
+
+                        predictedDemands,
+
+
+                    borderColor:
+
+                        "#315da8",
+
+
+                    backgroundColor:
+
+                        "rgba(49, 93, 168, 0.15)",
+
+
+                    borderWidth:
+
+                        3,
+
+
+                    fill:
+
+                        true,
+
+
+                    tension:
+
+                        0.4,
+
+
+                    pointRadius:
+
+                        5,
+
+
+                    pointBackgroundColor:
+
+                        "#315da8"
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+
+            maintainAspectRatio: true,
+
+
+            plugins: {
+
+                legend: {
+
+                    position:
+
+                        "top"
+
+                }
+
+            },
+
+
+            scales: {
+
+                y: {
+
+                    beginAtZero:
+
+                        true
+
+                }
+
+            }
+
+        }
+
+    }
+
+);
+
+
+
+
+/* =========================================
+   STUDENTS VS FOOD DEMAND CHART
+========================================= */
+
+
+new Chart(
+
+    document.getElementById(
+
+        "comparisonChart"
+
+    ),
+
+    {
+
+        type: "bar",
+
+
+        data: {
+
+            labels: labels,
+
+
+            datasets: [
+
+                {
+
+                    label:
+
+                        "Expected Students",
+
+
+                    data:
+
+                        expectedStudents,
+
+
+                    backgroundColor:
+
+                        "rgba(49, 93, 168, 0.70)",
+
+
+                    borderRadius:
+
+                        7
+
+                },
+
+
+                {
+
+                    label:
+
+                        "Predicted Food Demand",
+
+
+                    data:
+
+                        predictedDemands,
+
+
+                    backgroundColor:
+
+                        "rgba(33, 140, 75, 0.70)",
+
+
+                    borderRadius:
+
+                        7
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+
+            maintainAspectRatio: true,
+
+
+            plugins: {
+
+                legend: {
+
+                    position:
+
+                        "top"
+
+                }
+
+            },
+
+
+            scales: {
+
+                y: {
+
+                    beginAtZero:
+
+                        true
+
+                }
+
+            }
+
+        }
+
+    }
+
+);
+
+
+
+
+/* =========================================
+   FOOD WASTE TREND CHART
+========================================= */
+
+
+new Chart(
+
+    document.getElementById(
+
+        "wasteChart"
+
+    ),
+
+    {
+
+        type: "line",
+
+
+        data: {
+
+            labels:
+
+                wasteLabels,
+
+
+            datasets: [
+
+                {
+
+                    label:
+
+                        "Food Wasted (Servings)",
+
+
+                    data:
+
+                        foodWasted,
+
+
+                    borderColor:
+
+                        "#c74444",
+
+
+                    backgroundColor:
+
+                        "rgba(199, 68, 68, 0.10)",
+
+
+                    borderWidth:
+
+                        3,
+
+
+                    tension:
+
+                        0.4,
+
+
+                    fill:
+
+                        true
+
+                },
+
+
+                {
+
+                    label:
+
+                        "Wastage Percentage (%)",
+
+
+                    data:
+
+                        wastagePercentages,
+
+
+                    borderColor:
+
+                        "#e09b22",
+
+
+                    backgroundColor:
+
+                        "rgba(224, 155, 34, 0.10)",
+
+
+                    borderWidth:
+
+                        3,
+
+
+                    tension:
+
+                        0.4
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive: true,
+
+
+            maintainAspectRatio: true,
+
+
+            plugins: {
+
+                legend: {
+
+                    position:
+
+                        "top"
+
+                }
+
+            },
+
+
+            scales: {
+
+                y: {
+
+                    beginAtZero:
+
+                        true
+
+                }
+
+            }
+
+        }
+
+    }
+
+);
+
+
+</script>
+
+{% endblock %}
