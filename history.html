@@ -1,0 +1,569 @@
+{% extends "base.html" %}
+
+{% block title %}
+Prediction History | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            📊 Prediction Records
+
+        </div>
+
+
+        <h1>
+
+            Prediction History
+
+        </h1>
+
+
+        <p>
+
+            View and manage your previous AI-powered
+            food demand predictions.
+
+        </p>
+
+
+        <div class="page-actions">
+
+
+            <a
+                href="/"
+                class="btn btn-primary"
+            >
+
+                ➕ New Prediction
+
+            </a>
+
+
+            <form
+                action="/clear-history"
+                method="POST"
+                onsubmit="return confirm('Are you sure you want to clear all prediction history?');"
+            >
+
+                <button
+                    type="submit"
+                    class="btn btn-danger"
+                >
+
+                    🗑️ Clear History
+
+                </button>
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                📊
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Total Predictions
+
+                </span>
+
+
+                <strong>
+
+                    {{ predictions | length }}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST DEMAND -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                🍽️
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Demand
+
+                </span>
+
+
+                <strong>
+
+                    {% if predictions %}
+
+                        {{ predictions[0][9] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- STUDENTS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                👨‍🎓
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Students
+
+                </span>
+
+
+                <strong>
+
+                    {% if predictions %}
+
+                        {{ predictions[0][4] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- AI STATUS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                🤖
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    AI Status
+
+                </span>
+
+
+                <strong
+                    style="color: #218c4b;"
+                >
+
+                    Active
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- HISTORY TABLE -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    📋 Prediction Records
+
+                </h2>
+
+
+                <p>
+
+                    Complete history of food demand predictions.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="search-box">
+
+                <span>
+
+                    🔍
+
+                </span>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search predictions..."
+                    onkeyup="searchPredictions()"
+                >
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="table-wrapper">
+
+
+            <table id="historyTable">
+
+
+                <thead>
+
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Day</th>
+
+                        <th>Meal</th>
+
+                        <th>Menu</th>
+
+                        <th>Expected Students</th>
+
+                        <th>Previous Demand</th>
+
+                        <th>Predicted Demand</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+
+                </thead>
+
+
+
+                <tbody>
+
+
+                    {% if predictions %}
+
+
+                        {% for prediction in predictions %}
+
+
+                        <tr>
+
+
+                            <td>
+
+                                #{{ prediction[0] }}
+
+                            </td>
+
+
+                            <td>
+
+                                {{ prediction[1] }}
+
+                            </td>
+
+
+                            <td>
+
+                                {{ prediction[2] }}
+
+                            </td>
+
+
+                            <td>
+
+                                {{ prediction[3] }}
+
+                            </td>
+
+
+                            <td>
+
+                                👨‍🎓 {{ prediction[4] }}
+
+                            </td>
+
+
+                            <td>
+
+                                {{ prediction[8] }}
+
+                            </td>
+
+
+                            <td>
+
+                                🍽️ {{ prediction[9] }}
+
+                            </td>
+
+
+                            <td>
+
+                                {{ prediction[10] }}
+
+                            </td>
+
+
+                        </tr>
+
+
+                        {% endfor %}
+
+
+                    {% else %}
+
+
+                        <tr>
+
+
+                            <td
+                                colspan="8"
+                                style="text-align: center; padding: 40px;"
+                            >
+
+
+                                <h3>
+
+                                    📭 No Prediction History
+
+                                </h3>
+
+
+                                <br>
+
+
+                                <p>
+
+                                    Start a new prediction to see records here.
+
+                                </p>
+
+
+                                <br>
+
+
+                                <a
+                                    href="/"
+                                    class="btn btn-primary"
+                                >
+
+                                    ➕ Create Prediction
+
+                                </a>
+
+
+                            </td>
+
+
+                        </tr>
+
+
+                    {% endif %}
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+
+
+function searchPredictions() {
+
+
+    const input =
+
+        document.getElementById(
+
+            "searchInput"
+
+        );
+
+
+    const filter =
+
+        input.value.toLowerCase();
+
+
+    const table =
+
+        document.getElementById(
+
+            "historyTable"
+
+        );
+
+
+    const rows =
+
+        table.getElementsByTagName(
+
+            "tr"
+
+        );
+
+
+    for (
+
+        let i = 1;
+
+        i < rows.length;
+
+        i++
+
+    ) {
+
+
+        const row =
+
+            rows[i];
+
+
+        const text =
+
+            row.innerText.toLowerCase();
+
+
+        if (
+
+            text.includes(filter)
+
+        ) {
+
+
+            row.style.display = "";
+
+
+        }
+
+        else {
+
+
+            row.style.display = "none";
+
+
+        }
+
+
+    }
+
+
+}
+
+
+</script>
+
+{% endblock %}
