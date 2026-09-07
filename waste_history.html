@@ -1,0 +1,695 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Waste History | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================== -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            🗂️ Food Waste Records
+
+        </div>
+
+
+        <h1>
+
+            Waste History
+
+        </h1>
+
+
+        <p>
+
+            View your previous food waste analysis
+            records and monitor food wastage trends.
+
+        </p>
+
+
+        <div class="page-actions">
+
+
+            <a
+                href="/waste-analysis"
+                class="btn btn-primary"
+            >
+
+                ♻️ Analyze New Waste
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         STATISTICS
+    ========================================== -->
+
+    <section class="stats-grid">
+
+
+        <!-- TOTAL RECORDS -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                📊
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Total Records
+
+                </span>
+
+
+                <strong>
+
+                    {{ records | length }}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST FOOD PREPARED -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                🍽️
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Food Prepared
+
+                </span>
+
+
+                <strong>
+
+                    {% if records %}
+
+                        {{ records[0][1] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST FOOD WASTED -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                🗑️
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Food Wasted
+
+                </span>
+
+
+                <strong>
+
+                    {% if records %}
+
+                        {{ records[0][3] }}
+
+                    {% else %}
+
+                        0
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LATEST WASTAGE PERCENTAGE -->
+
+        <div class="stat-card">
+
+
+            <div class="stat-icon">
+
+                📉
+
+            </div>
+
+
+            <div class="stat-info">
+
+
+                <span>
+
+                    Latest Wastage
+
+                </span>
+
+
+                <strong>
+
+                    {% if records %}
+
+                        {{ records[0][4] }}%
+
+                    {% else %}
+
+                        0%
+
+                    {% endif %}
+
+                </strong>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         WASTE HISTORY TABLE
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    ♻️ Food Waste Records
+
+                </h2>
+
+
+                <p>
+
+                    Complete history of food waste analysis.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="search-box">
+
+
+                <span>
+
+                    🔍
+
+                </span>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search records..."
+                    onkeyup="searchWasteRecords()"
+                >
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="table-wrapper">
+
+
+            <table id="wasteHistoryTable">
+
+
+                <thead>
+
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Food Prepared</th>
+
+                        <th>Students Served</th>
+
+                        <th>Food Wasted</th>
+
+                        <th>Wastage Percentage</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+
+                </thead>
+
+
+
+                <tbody>
+
+
+                    {% if records %}
+
+
+                        {% for record in records %}
+
+
+                        <tr>
+
+
+                            <!-- ID -->
+
+                            <td>
+
+                                #{{ record[0] }}
+
+                            </td>
+
+
+
+                            <!-- FOOD PREPARED -->
+
+                            <td>
+
+                                🍽️ {{ record[1] }}
+
+                            </td>
+
+
+
+                            <!-- STUDENTS SERVED -->
+
+                            <td>
+
+                                👨‍🎓 {{ record[2] }}
+
+                            </td>
+
+
+
+                            <!-- FOOD WASTED -->
+
+                            <td>
+
+                                🗑️ {{ record[3] }}
+
+                            </td>
+
+
+
+                            <!-- WASTAGE PERCENTAGE -->
+
+                            <td>
+
+                                📉 {{ record[4] }}%
+
+                            </td>
+
+
+
+                            <!-- DATE -->
+
+                            <td>
+
+                                {{ record[5] }}
+
+                            </td>
+
+
+                        </tr>
+
+
+                        {% endfor %}
+
+
+                    {% else %}
+
+
+                        <!-- NO RECORDS -->
+
+                        <tr>
+
+
+                            <td
+                                colspan="6"
+                                style="text-align: center; padding: 40px;"
+                            >
+
+
+                                <h3>
+
+                                    📭 No Waste Records
+
+                                </h3>
+
+
+                                <br>
+
+
+                                <p>
+
+                                    Analyze food waste to start
+                                    building your waste history.
+
+                                </p>
+
+
+                                <br>
+
+
+                                <a
+                                    href="/waste-analysis"
+                                    class="btn btn-primary"
+                                >
+
+                                    ♻️ Analyze Food Waste
+
+                                </a>
+
+
+                            </td>
+
+
+                        </tr>
+
+
+                    {% endif %}
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         INFORMATION SECTION
+    ========================================== -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    💡 Why Track Food Waste?
+
+                </h2>
+
+
+                <p>
+
+                    Monitoring food waste helps improve
+                    food preparation and reduce unnecessary
+                    wastage.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <section class="recommendation-grid">
+
+
+            <!-- TRACK -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    📊 Track Trends
+
+                </h3>
+
+
+                <p>
+
+                    Monitor food wastage over time and
+                    identify patterns in food consumption.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- REDUCE -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    ♻️ Reduce Waste
+
+                </h3>
+
+
+                <p>
+
+                    Use historical waste data to reduce
+                    unnecessary food preparation.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PLAN -->
+
+            <div class="recommendation-card">
+
+
+                <h3>
+
+                    💡 Improve Planning
+
+                </h3>
+
+
+                <p>
+
+                    Combine waste analysis with AI demand
+                    predictions for smarter mess planning.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script>
+
+
+/* =========================================
+   SEARCH WASTE RECORDS
+========================================= */
+
+function searchWasteRecords() {
+
+
+    const input =
+
+        document.getElementById(
+
+            "searchInput"
+
+        );
+
+
+    const filter =
+
+        input.value.toLowerCase();
+
+
+    const table =
+
+        document.getElementById(
+
+            "wasteHistoryTable"
+
+        );
+
+
+    const rows =
+
+        table.getElementsByTagName(
+
+            "tr"
+
+        );
+
+
+    /* START FROM 1 BECAUSE 0 IS TABLE HEADER */
+
+    for (
+
+        let i = 1;
+
+        i < rows.length;
+
+        i++
+
+    ) {
+
+
+        const row =
+
+            rows[i];
+
+
+        const text =
+
+            row.innerText.toLowerCase();
+
+
+        if (
+
+            text.includes(
+
+                filter
+
+            )
+
+        ) {
+
+
+            row.style.display = "";
+
+
+        }
+
+
+        else {
+
+
+            row.style.display = "none";
+
+
+        }
+
+
+    }
+
+
+}
+
+
+</script>
+
+{% endblock %}

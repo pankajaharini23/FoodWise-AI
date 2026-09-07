@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+AI Recommendations | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================== -->
+
+    <section class="page-header">
+
+
+        <div class="page-badge">
+
+            🤖 AI-Powered Insights
+
+        </div>
+
+
+        <h1>
+
+            Smart Recommendations
+
+        </h1>
+
+
+        <p>
+
+            Get intelligent recommendations based on
+            your latest food demand predictions and
+            food waste analysis.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         RECOMMENDATIONS
+    ========================================== -->
+
+    <section class="recommendation-grid">
+
+
+        {% for recommendation in recommendations %}
+
+
+        <div class="recommendation-card">
+
+
+            <h3>
+
+                {{ recommendation.icon }}
+
+                {{ recommendation.title }}
+
+            </h3>
+
+
+            <p>
+
+                {{ recommendation.message }}
+
+            </p>
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         IF NO RECOMMENDATIONS
+    ========================================== -->
+
+    {% if not recommendations %}
+
+
+    <section class="card">
+
+
+        <div style="text-align: center; padding: 30px;">
+
+
+            <h2>
+
+                📭 No Recommendations Available
+
+            </h2>
+
+
+            <br>
+
+
+            <p>
+
+                Create a food demand prediction or
+                analyze food waste to receive
+                AI-powered recommendations.
+
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="/"
+                class="btn btn-primary"
+            >
+
+                ➕ Create Prediction
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+    {% endif %}
+
+
+
+    <!-- =========================================
+         SMART PLANNING INFORMATION
+    ========================================== -->
+
+    <section class="card" style="margin-top: 30px;">
+
+
+        <div class="card-header">
+
+
+            <div>
+
+
+                <h2>
+
+                    💡 How FoodWise AI Helps
+
+                </h2>
+
+
+                <p>
+
+                    FoodWise AI continuously helps improve
+                    food preparation decisions.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <section class="metrics-grid">
+
+
+            <div class="metric-card">
+
+
+                <h3>
+
+                    📊 Demand Analysis
+
+                </h3>
+
+
+                <p>
+
+                    Uses prediction data to estimate
+                    how much food should be prepared.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="metric-card">
+
+
+                <h3>
+
+                    ♻️ Waste Reduction
+
+                </h3>
+
+
+                <p>
+
+                    Identifies food wastage patterns
+                    and provides recommendations.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="metric-card">
+
+
+                <h3>
+
+                    📈 Smart Planning
+
+                </h3>
+
+
+                <p>
+
+                    Helps administrators make better
+                    data-driven decisions.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Profile | FoodWise AI
+{% endblock %}
+
+{% block content %}
+
+<main class="container">
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+
+        <div class="page-badge">
+            👤 ACCOUNT MANAGEMENT
+        </div>
+
+        <h1>My Profile</h1>
+
+        <p>
+            Manage your account information and security settings.
+        </p>
+
+    </section>
+
+
+    <section class="profile-layout">
+
+        <!-- LEFT PROFILE CARD -->
+        <div class="profile-card">
+
+            <div class="profile-avatar">
+                {{ user[1][0] | upper }}
+            </div>
+
+            <h2>{{ user[1] }}</h2>
+
+            <p class="profile-role">
+                {{ user[4] }}
+            </p>
+
+            <div class="profile-status">
+
+                <span class="status-dot"></span>
+
+                Active Account
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="profile-content">
+
+
+            <!-- ACCOUNT INFORMATION -->
+            <div class="profile-details-card">
+
+                <div class="profile-card-header">
+
+                    <div>
+
+                        <h2>Account Information</h2>
+
+                        <p>
+                            Update your personal information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    method="POST"
+                    action="{{ url_for('update_profile') }}"
+                    class="profile-form"
+                >
+
+                    <div class="form-group">
+
+                        <label>
+                            👤 Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            value="{{ user[1] }}"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            📧 Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            value="{{ user[2] }}"
+                            disabled
+                        >
+
+                        <small>
+                            Email address cannot currently be changed.
+                        </small>
+
+                    </div>
+
+
+                    <div class="profile-info-row">
+
+                        <div>
+
+                            <span>💼 Role</span>
+
+                            <strong>
+                                {{ user[4] }}
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>📅 Member Since</span>
+
+                            <strong>
+                                {{ user[5] }}
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        💾 Save Changes
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- CHANGE PASSWORD -->
+            <div class="profile-details-card password-card">
+
+                <div class="profile-card-header">
+
+                    <div>
+
+                        <h2>Security Settings</h2>
+
+                        <p>
+                            Change your account password securely.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    method="POST"
+                    action="{{ url_for('change_password') }}"
+                    class="profile-form"
+                >
+
+                    <div class="form-group">
+
+                        <label>
+                            🔐 Current Password
+                        </label>
+
+                        <input
+                            type="password"
+                            name="current_password"
+                            placeholder="Enter current password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            🔑 New Password
+                        </label>
+
+                        <input
+                            type="password"
+                            name="new_password"
+                            placeholder="Enter new password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            🔑 Confirm New Password
+                        </label>
+
+                        <input
+                            type="password"
+                            name="confirm_password"
+                            placeholder="Confirm new password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn profile-security-btn"
+                    >
+
+                        🔒 Change Password
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- LOGOUT -->
+            <div class="profile-danger-zone">
+
+                <div>
+
+                    <h3>
+                        Logout
+                    </h3>
+
+                    <p>
+                        Securely sign out from your FoodWise AI account.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="{{ url_for('logout') }}"
+                    class="btn profile-logout-btn"
+                >
+
+                    🚪 Logout
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smart Alerts | FoodWise AI
+{% endblock %}
+
+
+{% block content %}
+
+<main class="container">
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <div class="page-badge">
+
+            🔔 INTELLIGENT MONITORING
+
+        </div>
+
+        <h1>
+
+            Smart Alerts
+
+        </h1>
+
+        <p>
+
+            Stay informed about food demand and wastage patterns
+            with AI-powered insights.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ALERT SUMMARY -->
+
+    <section class="alerts-summary">
+
+        <div class="alerts-summary-icon">
+
+            🔔
+
+        </div>
+
+
+        <div>
+
+            <h2>
+
+                FoodWise AI Monitoring
+
+            </h2>
+
+            <p>
+
+                Alerts are generated automatically using your
+                latest prediction and food waste data.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ALERT LIST -->
+
+    <section class="alerts-container">
+
+
+        {% for alert in alerts %}
+
+
+        <div class="alert-card alert-{{ alert.type }}">
+
+
+            <div class="alert-icon">
+
+                {{ alert.icon }}
+
+            </div>
+
+
+            <div class="alert-content">
+
+                <h3>
+
+                    {{ alert.title }}
+
+                </h3>
+
+
+                <p>
+
+                    {{ alert.message }}
+
+                </p>
+
+            </div>
+
+
+            <div class="alert-status">
+
+                {% if alert.type == "danger" %}
+
+                    Action Required
+
+                {% elif alert.type == "warning" %}
+
+                    Attention
+
+                {% elif alert.type == "success" %}
+
+                    Good
+
+                {% else %}
+
+                    Information
+
+                {% endif %}
+
+            </div>
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="alerts-actions">
+
+
+        <a
+
+            href="{{ url_for('home') }}"
+
+            class="btn btn-primary"
+
+        >
+
+            🤖 Make Prediction
+
+        </a>
+
+
+        <a
+
+            href="{{ url_for('waste_analysis') }}"
+
+            class="btn btn-secondary"
+
+        >
+
+            ♻️ Analyze Food Waste
+
+        </a>
+
+
+    </section>
+
+
+</main>
+
+{% endblock %}
